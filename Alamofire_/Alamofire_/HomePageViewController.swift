@@ -58,5 +58,4 @@ extension HomePageViewController : UICollectionViewDataSource, UICollectionViewD
         ])
     }
     
-    
 }
