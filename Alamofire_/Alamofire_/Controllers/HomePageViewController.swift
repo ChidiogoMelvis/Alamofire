@@ -47,6 +47,10 @@ extension HomePageViewController : UICollectionViewDataSource, UICollectionViewD
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
     func setupViews() {
         view.addSubview(collectionView)
         

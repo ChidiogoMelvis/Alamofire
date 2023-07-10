@@ -109,16 +109,11 @@
 		042B995A2A5A088B005E2FBC /* Alamofire_ */ = {
 			isa = PBXGroup;
 			children = (
-				042B995B2A5A088B005E2FBC /* AppDelegate.swift */,
-				042B995D2A5A088B005E2FBC /* SceneDelegate.swift */,
-				042B995F2A5A088B005E2FBC /* ViewController.swift */,
-				042B99922A5A0A92005E2FBC /* NetworkCall.swift */,
-				042B998B2A5A097E005E2FBC /* HomePageViewController.swift */,
-				042B99942A5B162A005E2FBC /* OrderViewController.swift */,
-				042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */,
-				042B99962A5B16B4005E2FBC /* OrderTableViewCell.swift */,
-				042B99642A5A088D005E2FBC /* Assets.xcassets */,
-				042B99662A5A088D005E2FBC /* LaunchScreen.storyboard */,
+				042B999A2A5BCECE005E2FBC /* Delegates */,
+				042B999D2A5BCF28005E2FBC /* NetworkManager */,
+				042B99992A5BCE9D005E2FBC /* Controllers */,
+				042B999B2A5BCEF2005E2FBC /* Resources */,
+				042B999C2A5BCF03005E2FBC /* Screen */,
 				042B99692A5A088D005E2FBC /* Info.plist */,
 			);
 			path = Alamofire_;
@@ -139,6 +134,59 @@
 				042B997E2A5A088D005E2FBC /* Alamofire_UITestsLaunchTests.swift */,
 			);
 			path = Alamofire_UITests;
+			sourceTree = "<group>";
+		};
+		042B99982A5BCE84005E2FBC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */,
+				042B99962A5B16B4005E2FBC /* OrderTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		042B99992A5BCE9D005E2FBC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				042B995F2A5A088B005E2FBC /* ViewController.swift */,
+				042B998B2A5A097E005E2FBC /* HomePageViewController.swift */,
+				042B99942A5B162A005E2FBC /* OrderViewController.swift */,
+				042B99982A5BCE84005E2FBC /* Cells */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		042B999A2A5BCECE005E2FBC /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				042B995B2A5A088B005E2FBC /* AppDelegate.swift */,
+				042B995D2A5A088B005E2FBC /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		042B999B2A5BCEF2005E2FBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				042B99642A5A088D005E2FBC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		042B999C2A5BCF03005E2FBC /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				042B99662A5A088D005E2FBC /* LaunchScreen.storyboard */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		042B999D2A5BCF28005E2FBC /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				042B99922A5A0A92005E2FBC /* NetworkCall.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
