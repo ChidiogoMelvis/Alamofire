@@ -82,7 +82,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .black
-        collectionView.register(EditorCollectionViewCell.self, forCellWithReuseIdentifier: "EditorCollectionViewCell")
+        collectionView.register(EditorsCollectionViewCell.self, forCellWithReuseIdentifier: "EditorCollectionViewCell")
         return collectionView
     }()
 

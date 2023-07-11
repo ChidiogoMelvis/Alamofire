@@ -7,6 +7,6 @@
 
 import UIKit
 
-class EditorCollectionViewCell: UICollectionViewCell {
+class EditorsCollectionViewCell: UICollectionViewCell {
     let identifier = "EditorCollectionViewCell"
 }

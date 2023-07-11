@@ -30,15 +30,17 @@ extension HomePageViewController {
         case recentlyPlayedCollectionView :
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
             cell.backgroundColor = .brown
+            return cell
         case editorsCollectionView :
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopSongCollectionViewCell", for: indexPath) as! TopSongCollectionViewCell
             cell.backgroundColor = .gray
+            return cell
         default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorsCollectionViewCell
             cell.backgroundColor = .black
+            return cell
         }
-        return UICollectionViewCell()
-    
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
