@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBar: UITabBarController {
+class TabBarViewController: UITabBarController {
     
     let controllers = UITabBarController()
     let firstVC = UINavigationController(rootViewController: HomePageViewController())
@@ -17,7 +17,7 @@ class TabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "tabbarBackgroundColor")
     }
     func setupViewControllers() {
         let vcIcons = [
@@ -31,7 +31,7 @@ class TabBar: UITabBarController {
         
         setViewControllers([firstVC, secondVC, thirdVC], animated: true)
         tabBar.tintColor = UIColor(named: "tabbarTintColor")
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = UIColor(named: "tabbarBackgroundColor")
         tabBar.unselectedItemTintColor = UIColor(named: "unselectedTabbarColor")
         
         guard let icons = self.tabBar.items else { return }

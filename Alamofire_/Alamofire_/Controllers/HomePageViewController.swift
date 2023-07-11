@@ -29,6 +29,7 @@ class HomePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
     
@@ -51,9 +52,9 @@ extension HomePageViewController : UICollectionViewDataSource, UICollectionViewD
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
     func setupViews() {
         view.addSubview(collectionView)
