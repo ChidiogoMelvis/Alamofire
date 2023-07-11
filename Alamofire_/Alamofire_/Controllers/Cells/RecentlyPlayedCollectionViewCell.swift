@@ -7,6 +7,6 @@
 
 import UIKit
 
-class HomePageCollectionViewCell: UICollectionViewCell {
+class RecentlyPlayedCollectionViewCell: UICollectionViewCell {
     let identifier = "HomePageCollectionViewCell"
 }

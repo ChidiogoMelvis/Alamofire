@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource {
     
     var randomColors = ["blue", "yellow", "red"]
     
@@ -26,7 +26,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         return stack
     }()
     
-    lazy var collectionView: UICollectionView = {
+    lazy var recentlyPlayedCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 5
@@ -37,7 +37,32 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(HomePageCollectionViewCell.self, forCellWithReuseIdentifier: "HomePageCollectionViewCell")
+        collectionView.register(RecentlyPlayedCollectionViewCell.self, forCellWithReuseIdentifier: "HomePageCollectionViewCell")
+        return collectionView
+    }()
+    
+    lazy var reviewTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .singleLine
+        tableView.register(ReviewTableViewCell.self, forCellReuseIdentifier: "ReviewTableViewCell")
+        return tableView
+    }()
+    
+    lazy var editorsCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.collectionViewLayout = layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(RecentlyPlayedCollectionViewCell.self, forCellWithReuseIdentifier: "HomePageCollectionViewCell")
         return collectionView
     }()
 
@@ -47,43 +72,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
 //        view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
-    
-    func setupViews() {
-        view.addSubview(collectionView)
-        view.addSubview(stackView)
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
-            
-            collectionView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
-        ])
-    }
 
 }
 
-
-
-extension HomePageViewController {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        randomColors.count
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomePageCollectionViewCell", for: indexPath) as! HomePageCollectionViewCell
-        return cell
-    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        <#code#>
-//    }
-    
-}

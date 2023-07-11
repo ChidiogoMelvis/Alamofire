@@ -17,13 +17,18 @@
 		042B997D2A5A088D005E2FBC /* Alamofire_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B997C2A5A088D005E2FBC /* Alamofire_UITests.swift */; };
 		042B997F2A5A088D005E2FBC /* Alamofire_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B997E2A5A088D005E2FBC /* Alamofire_UITestsLaunchTests.swift */; };
 		042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B998B2A5A097E005E2FBC /* HomePageViewController.swift */; };
-		042B998E2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */; };
+		042B998E2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B998D2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift */; };
 		042B99912A5A0A52005E2FBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 042B99902A5A0A52005E2FBC /* Alamofire */; };
 		042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99922A5A0A92005E2FBC /* NetworkCall.swift */; };
 		042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */; };
 		042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */; };
 		042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */; };
 		04A5DF552A5CF39F0011F70C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF542A5CF39F0011F70C /* Button.swift */; };
+		04A5DF582A5D0FBB0011F70C /* RecentlyPlayedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF572A5D0FBB0011F70C /* RecentlyPlayedCollectionView.swift */; };
+		04A5DF5A2A5D0FD10011F70C /* ReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF592A5D0FD10011F70C /* ReviewTableView.swift */; };
+		04A5DF5C2A5D0FE60011F70C /* EditorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5B2A5D0FE60011F70C /* EditorCollectionView.swift */; };
+		04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */; };
+		04A5DF602A5D116E0011F70C /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5F2A5D116E0011F70C /* ReviewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +63,17 @@
 		042B997C2A5A088D005E2FBC /* Alamofire_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire_UITests.swift; sourceTree = "<group>"; };
 		042B997E2A5A088D005E2FBC /* Alamofire_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire_UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		042B998B2A5A097E005E2FBC /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCollectionViewCell.swift; sourceTree = "<group>"; };
+		042B998D2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedCollectionViewCell.swift; sourceTree = "<group>"; };
 		042B99922A5A0A92005E2FBC /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
 		042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPageViewController.swift; sourceTree = "<group>"; };
 		04A5DF542A5CF39F0011F70C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		04A5DF572A5D0FBB0011F70C /* RecentlyPlayedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedCollectionView.swift; sourceTree = "<group>"; };
+		04A5DF592A5D0FD10011F70C /* ReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableView.swift; sourceTree = "<group>"; };
+		04A5DF5B2A5D0FE60011F70C /* EditorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCollectionView.swift; sourceTree = "<group>"; };
+		04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageConstraints.swift; sourceTree = "<group>"; };
+		04A5DF5F2A5D116E0011F70C /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 		042B995A2A5A088B005E2FBC /* Alamofire_ */ = {
 			isa = PBXGroup;
 			children = (
+				04A5DF562A5D0F5E0011F70C /* Extensions */,
 				04A5DF532A5CE2720011F70C /* ReusableViews */,
 				042B99A62A5CDA82005E2FBC /* Cordinator */,
 				042B999A2A5BCECE005E2FBC /* Delegates */,
@@ -147,7 +158,8 @@
 		042B99982A5BCE84005E2FBC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */,
+				042B998D2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift */,
+				04A5DF5F2A5D116E0011F70C /* ReviewTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -212,6 +224,17 @@
 				04A5DF542A5CF39F0011F70C /* Button.swift */,
 			);
 			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		04A5DF562A5D0F5E0011F70C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DF572A5D0FBB0011F70C /* RecentlyPlayedCollectionView.swift */,
+				04A5DF592A5D0FD10011F70C /* ReviewTableView.swift */,
+				04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */,
+				04A5DF5B2A5D0FE60011F70C /* EditorCollectionView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,15 +373,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A5DF5A2A5D0FD10011F70C /* ReviewTableView.swift in Sources */,
+				04A5DF5C2A5D0FE60011F70C /* EditorCollectionView.swift in Sources */,
 				04018C972A5CDE0F002FF85F /* AppCordinator.swift in Sources */,
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,
 				042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */,
 				042B99602A5A088B005E2FBC /* ViewController.swift in Sources */,
 				042B995C2A5A088B005E2FBC /* AppDelegate.swift in Sources */,
+				04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */,
 				042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */,
+				04A5DF602A5D116E0011F70C /* ReviewTableViewCell.swift in Sources */,
 				042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */,
-				042B998E2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift in Sources */,
+				042B998E2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift in Sources */,
 				042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */,
+				04A5DF582A5D0FBB0011F70C /* RecentlyPlayedCollectionView.swift in Sources */,
 				042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */,
 				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
 			);
