@@ -19,8 +19,9 @@
 		042B998E2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */; };
 		042B99912A5A0A52005E2FBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 042B99902A5A0A52005E2FBC /* Alamofire */; };
 		042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99922A5A0A92005E2FBC /* NetworkCall.swift */; };
-		042B99952A5B162A005E2FBC /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99942A5B162A005E2FBC /* OrderViewController.swift */; };
-		042B99972A5B16B4005E2FBC /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99962A5B16B4005E2FBC /* OrderTableViewCell.swift */; };
+		042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */; };
+		042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */; };
+		042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,9 @@
 		042B998B2A5A097E005E2FBC /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCollectionViewCell.swift; sourceTree = "<group>"; };
 		042B99922A5A0A92005E2FBC /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
-		042B99942A5B162A005E2FBC /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
-		042B99962A5B16B4005E2FBC /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
+		042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				042B998D2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift */,
-				042B99962A5B16B4005E2FBC /* OrderTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -149,8 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				042B995F2A5A088B005E2FBC /* ViewController.swift */,
+				042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */,
 				042B998B2A5A097E005E2FBC /* HomePageViewController.swift */,
-				042B99942A5B162A005E2FBC /* OrderViewController.swift */,
+				042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */,
+				042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */,
 				042B99982A5BCE84005E2FBC /* Cells */,
 			);
 			path = Controllers;
@@ -326,10 +329,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,
+				042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */,
 				042B99602A5A088B005E2FBC /* ViewController.swift in Sources */,
-				042B99972A5B16B4005E2FBC /* OrderTableViewCell.swift in Sources */,
 				042B995C2A5A088B005E2FBC /* AppDelegate.swift in Sources */,
-				042B99952A5B162A005E2FBC /* OrderViewController.swift in Sources */,
+				042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */,
+				042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */,
 				042B998E2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift in Sources */,
 				042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */,
 				042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */,
