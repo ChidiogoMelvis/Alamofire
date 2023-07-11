@@ -11,8 +11,11 @@ import UIKit
 extension HomePageViewController {
     
     func setupViews() {
-        view.addSubview(recentlyPlayedCollectionView)
         view.addSubview(stackView)
+        view.addSubview(recentlyPlayedCollectionView)
+        view.addSubview(reviewTableView)
+        view.addSubview(topSongCollectionView)
+        view.addSubview(editorsCollectionView)
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
@@ -23,7 +26,7 @@ extension HomePageViewController {
             recentlyPlayedCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             //recentlyPlayedCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
             
-            reviewTableView.topAnchor.constraint(equalTo: recentlyPlayedCollectionView.bottomAnchor, constant: 10),
+            reviewTableView.topAnchor.constraint(equalTo: recentlyPlayedCollectionView.bottomAnchor, constant: 15),
             reviewTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             reviewTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             
