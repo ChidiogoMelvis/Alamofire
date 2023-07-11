@@ -9,5 +9,10 @@ import Foundation
 import UIKit
 
 class AppCordinator {
+     let window: UIWindow
     
+    init(window: UIWindow) {
+           self.window = window
+       }
+       
 }
