@@ -33,8 +33,19 @@ class HomePageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func setupViews() {
+        view.addSubview(collectionView)
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
+        ])
+    }
 
 }
+
 
 
 extension HomePageViewController : UICollectionViewDataSource, UICollectionViewDelegate {
@@ -50,17 +61,6 @@ extension HomePageViewController : UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomePageCollectionViewCell", for: indexPath) as! HomePageCollectionViewCell
         return cell
-    }
-    
-    func setupViews() {
-        view.addSubview(collectionView)
-        
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
-        ])
     }
     
 }

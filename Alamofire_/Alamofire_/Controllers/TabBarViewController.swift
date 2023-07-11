@@ -25,6 +25,7 @@ class TabBarViewController: UITabBarController {
             UIImage(named: "Search"),
             UIImage(named: "Librarysmall")
         ]
+        
         firstVC.title = "Home"
         secondVC.title = "Search"
         thirdVC.title = "Your Library"
