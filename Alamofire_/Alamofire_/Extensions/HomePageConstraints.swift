@@ -24,7 +24,7 @@ extension HomePageViewController {
             recentlyPlayedCollectionView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
             recentlyPlayedCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             recentlyPlayedCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
-            //recentlyPlayedCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+            recentlyPlayedCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
             
             reviewTableView.topAnchor.constraint(equalTo: recentlyPlayedCollectionView.bottomAnchor, constant: 15),
             reviewTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),

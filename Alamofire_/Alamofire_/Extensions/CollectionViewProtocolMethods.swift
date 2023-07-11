@@ -11,29 +11,46 @@ import UIKit
 extension HomePageViewController {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        randomColors.count
+        switch collectionView {
+        case recentlyPlayedCollectionView :
+            return 3
+        case topSongCollectionView :
+            return 4
+        default:
+            return 5
+        }
     }
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 3
-//    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomePageCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
-        cell.backgroundColor = .black
-        return cell
+        switch collectionView {
+        case recentlyPlayedCollectionView :
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
+            cell.backgroundColor = .brown
+        case editorsCollectionView :
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopSongCollectionViewCell", for: indexPath) as! TopSongCollectionViewCell
+            cell.backgroundColor = .gray
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorCollectionViewCell
+            cell.backgroundColor = .black
+        }
+        return UICollectionViewCell()
+    
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        switch indexPath.section {
-//        case 0 :
-//            return CGSize(width: 200, height: 200)
-//        case 1 :
-//            return CGSize(width: 150, height: 150)
-//        default:
-//            return CGSize(width: 100, height: 100)
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionView {
+        case recentlyPlayedCollectionView :
+            return CGSize(width: 200, height: 200)
+        case topSongCollectionView :
+            return CGSize(width: 150, height: 150)
+        default:
+            return CGSize(width: 100, height: 100)
+        }
+    }
     
 }
 

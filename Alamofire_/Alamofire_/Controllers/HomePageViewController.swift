@@ -38,6 +38,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = .brown
         collectionView.register(RecentlyPlayedCollectionViewCell.self, forCellWithReuseIdentifier: "RecentlyPlayedCollectionViewCell")
         return collectionView
     }()
@@ -48,6 +49,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
+        tableView.backgroundColor = .black
         tableView.register(ReviewTableViewCell.self, forCellReuseIdentifier: "ReviewTableViewCell")
         return tableView
     }()
@@ -63,6 +65,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = .brown
         collectionView.register(TopSongCollectionViewCell.self, forCellWithReuseIdentifier: "TopSongCollectionViewCell")
         return collectionView
     }()
@@ -78,6 +81,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = .black
         collectionView.register(EditorCollectionViewCell.self, forCellWithReuseIdentifier: "EditorCollectionViewCell")
         return collectionView
     }()
@@ -85,7 +89,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-//        view.backgroundColor = .white
+        view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
 

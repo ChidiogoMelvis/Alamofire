@@ -8,5 +8,5 @@
 import UIKit
 
 class RecentlyPlayedCollectionViewCell: UICollectionViewCell {
-    let identifier = "HomePageCollectionViewCell"
+    let identifier = "RecentlyPlayedCollectionViewCell"
 }
