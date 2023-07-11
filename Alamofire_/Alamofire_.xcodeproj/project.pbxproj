@@ -23,6 +23,7 @@
 		042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */; };
 		042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */; };
 		042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */; };
+		04A5DF552A5CF39F0011F70C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF542A5CF39F0011F70C /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPageViewController.swift; sourceTree = "<group>"; };
+		04A5DF542A5CF39F0011F70C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		042B995A2A5A088B005E2FBC /* Alamofire_ */ = {
 			isa = PBXGroup;
 			children = (
+				04A5DF532A5CE2720011F70C /* ReusableViews */,
 				042B99A62A5CDA82005E2FBC /* Cordinator */,
 				042B999A2A5BCECE005E2FBC /* Delegates */,
 				042B999D2A5BCF28005E2FBC /* NetworkManager */,
@@ -201,6 +204,14 @@
 				04018C962A5CDE0F002FF85F /* AppCordinator.swift */,
 			);
 			path = Cordinator;
+			sourceTree = "<group>";
+		};
+		04A5DF532A5CE2720011F70C /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DF542A5CF39F0011F70C /* Button.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 				042B998E2A5A09A9005E2FBC /* HomePageCollectionViewCell.swift in Sources */,
 				042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */,
 				042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */,
+				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
