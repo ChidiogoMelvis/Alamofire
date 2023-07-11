@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource {
     
@@ -37,7 +38,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(RecentlyPlayedCollectionViewCell.self, forCellWithReuseIdentifier: "HomePageCollectionViewCell")
+        collectionView.register(RecentlyPlayedCollectionViewCell.self, forCellWithReuseIdentifier: "RecentlyPlayedCollectionViewCell")
         return collectionView
     }()
     
@@ -51,6 +52,21 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         return tableView
     }()
     
+    lazy var topSongCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.collectionViewLayout = layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(TopSongCollectionViewCell.self, forCellWithReuseIdentifier: "TopSongCollectionViewCell")
+        return collectionView
+    }()
+    
     lazy var editorsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -62,7 +78,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(RecentlyPlayedCollectionViewCell.self, forCellWithReuseIdentifier: "HomePageCollectionViewCell")
+        collectionView.register(EditorCollectionViewCell.self, forCellWithReuseIdentifier: "EditorCollectionViewCell")
         return collectionView
     }()
 
