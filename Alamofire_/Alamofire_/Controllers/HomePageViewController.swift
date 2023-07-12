@@ -10,13 +10,11 @@ import AVFoundation
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var randomColors = ["blue", "yellow", "red"]
+    var notificationButton = Button(image: "notification")
     
-    var notificationButton = ReusableButton(image: "notification")
+    var orientationButton = Button(image: "orientationLock")
     
-    var orientationButton = ReusableButton(image: "orientationLock")
-    
-    var settingsButton = ReusableButton(image: "Settings")
+    var settingsButton = Button(image: "Settings")
     
     lazy var stackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [notificationButton, orientationButton, settingsButton])

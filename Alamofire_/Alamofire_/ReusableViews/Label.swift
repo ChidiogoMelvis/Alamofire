@@ -1,21 +1,20 @@
 //
-//  Button.swift
+//  Label.swift
 //  Alamofire_
 //
-//  Created by Mac on 11/07/2023.
+//  Created by Mac on 12/07/2023.
 //
 
 import UIKit
 
+class Label: UILabel {
 
-class Button: UIButton {
-
-//    override init(frame String: CGRect) {
-//    super.init(frame: frame)
-    init(image: String) {
+    init(label: String) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
-    self.setImage(UIImage(named: image), for: .normal)
+        self.text = label
+        self.textColor = .white
+        self.font = UIFont.systemFont(ofSize: 25, weight: .bold)
 }
 
 required init?(coder aDecoder: NSCoder) {
