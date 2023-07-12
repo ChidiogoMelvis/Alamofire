@@ -9,6 +9,10 @@ import UIKit
 
 class SearchPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let temporalSections = ["Section 1", "Section 2", "Section 3"]
+    
+    let temporalData = [["1", "2"], ["3", "4", "5"], ["6", "7", "8", "9"]]
+    
     let searchLabel = Label(label: "Search")
     
     let cameraButton = Button(image: "camera")
