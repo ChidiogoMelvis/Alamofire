@@ -34,6 +34,7 @@ extension HomePageViewController {
         case recentlyPlayedCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
             cell.backgroundColor = .brown
+            cell.layer.cornerRadius = 75
             return cell
         case reviewCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as! ReviewCollectionViewCell
@@ -53,6 +54,17 @@ extension HomePageViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 150)
+        switch collectionView {
+        case recentlyPlayedCollectionView:
+            return CGSize(width: 150, height: 150)
+        case reviewCollectionView:
+            return CGSize(width: 200, height: 200)
+        case topSongCollectionView:
+            return CGSize(width: 200, height: 200)
+        case editorsCollectionView:
+            return CGSize(width: 200, height: 200)
+        default:
+            return CGSize(width: 50, height: 50)
+        }
     }
 }
