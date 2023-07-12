@@ -29,10 +29,17 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     
     lazy var scrollView: UIScrollView = {
-            let scrollView = UIScrollView()
-            scrollView.translatesAutoresizingMaskIntoConstraints = false
-            return scrollView
-        }()
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+
+        let contentHeight = recentlyPlayedCollectionView.frame.height + reviewCollectionView.frame.height + topSongCollectionView.frame.height + editorsCollectionView.frame.height + spacingBetweenViews
+        
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: contentHeight)
+        
+        return scrollView
+    }()
+
+    let spacingBetweenViews: CGFloat = 10
     
     lazy var recentlyPlayedCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
