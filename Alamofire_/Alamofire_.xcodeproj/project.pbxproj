@@ -23,11 +23,10 @@
 		042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */; };
 		042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */; };
 		042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */; };
+		04718B212A5E210B00A636FB /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */; };
 		04A5DF552A5CF39F0011F70C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF542A5CF39F0011F70C /* Button.swift */; };
 		04A5DF582A5D0FBB0011F70C /* CollectionViewProtocolMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF572A5D0FBB0011F70C /* CollectionViewProtocolMethods.swift */; };
-		04A5DF5A2A5D0FD10011F70C /* ReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF592A5D0FD10011F70C /* ReviewTableView.swift */; };
 		04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */; };
-		04A5DF602A5D116E0011F70C /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5F2A5D116E0011F70C /* ReviewTableViewCell.swift */; };
 		04A5DF622A5D7E960011F70C /* EditorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */; };
 		04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -69,11 +68,10 @@
 		042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPageViewController.swift; sourceTree = "<group>"; };
+		04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		04A5DF542A5CF39F0011F70C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		04A5DF572A5D0FBB0011F70C /* CollectionViewProtocolMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocolMethods.swift; sourceTree = "<group>"; };
-		04A5DF592A5D0FD10011F70C /* ReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableView.swift; sourceTree = "<group>"; };
 		04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageConstraints.swift; sourceTree = "<group>"; };
-		04A5DF5F2A5D116E0011F70C /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,8 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				042B998D2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift */,
-				04A5DF5F2A5D116E0011F70C /* ReviewTableViewCell.swift */,
 				04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */,
+				04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */,
 				04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -234,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				04A5DF572A5D0FBB0011F70C /* CollectionViewProtocolMethods.swift */,
-				04A5DF592A5D0FD10011F70C /* ReviewTableView.swift */,
 				04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */,
 			);
 			path = Extensions;
@@ -376,16 +373,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A5DF5A2A5D0FD10011F70C /* ReviewTableView.swift in Sources */,
 				04018C972A5CDE0F002FF85F /* AppCordinator.swift in Sources */,
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,
+				04718B212A5E210B00A636FB /* ReviewCollectionViewCell.swift in Sources */,
 				04A5DF622A5D7E960011F70C /* EditorsCollectionViewCell.swift in Sources */,
 				042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */,
 				042B99602A5A088B005E2FBC /* ViewController.swift in Sources */,
 				042B995C2A5A088B005E2FBC /* AppDelegate.swift in Sources */,
 				04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */,
 				042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */,
-				04A5DF602A5D116E0011F70C /* ReviewTableViewCell.swift in Sources */,
 				042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */,
 				042B998E2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift in Sources */,
 				042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */,

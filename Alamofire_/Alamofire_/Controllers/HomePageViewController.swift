@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource {
+class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var randomColors = ["blue", "yellow", "red"]
     
@@ -27,9 +27,16 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         return stack
     }()
     
+    
+    lazy var scrollView: UIScrollView = {
+            let scrollView = UIScrollView()
+            scrollView.translatesAutoresizingMaskIntoConstraints = false
+            return scrollView
+        }()
+    
     lazy var recentlyPlayedCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+        layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 5
         layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
@@ -38,20 +45,23 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .brown
         collectionView.register(RecentlyPlayedCollectionViewCell.self, forCellWithReuseIdentifier: "RecentlyPlayedCollectionViewCell")
         return collectionView
     }()
     
-    lazy var reviewTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorStyle = .singleLine
-        tableView.backgroundColor = .black
-        tableView.register(ReviewTableViewCell.self, forCellReuseIdentifier: "ReviewTableViewCell")
-        return tableView
+    lazy var reviewCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.collectionViewLayout = layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(ReviewCollectionViewCell.self, forCellWithReuseIdentifier: "ReviewCollectionViewCell")
+        return collectionView
     }()
     
     lazy var topSongCollectionView: UICollectionView = {
@@ -65,7 +75,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .brown
         collectionView.register(TopSongCollectionViewCell.self, forCellWithReuseIdentifier: "TopSongCollectionViewCell")
         return collectionView
     }()
@@ -81,7 +90,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .black
         collectionView.register(EditorsCollectionViewCell.self, forCellWithReuseIdentifier: "EditorCollectionViewCell")
         return collectionView
     }()
@@ -89,7 +97,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        view.backgroundColor = .white
+        //view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
 
