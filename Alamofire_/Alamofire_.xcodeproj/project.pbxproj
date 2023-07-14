@@ -23,6 +23,8 @@
 		042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */; };
 		042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */; };
 		042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */; };
+		0438B39A2A617307000C3701 /* AlbumviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438B3992A617307000C3701 /* AlbumviewViewController.swift */; };
+		045C90192A61710000ADD41A /* SearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C90182A61710000ADD41A /* SearchTableView.swift */; };
 		04718B212A5E210B00A636FB /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */; };
 		04718B232A5E6B4600A636FB /* SearchPageConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B222A5E6B4600A636FB /* SearchPageConstraint.swift */; };
 		04718B252A5E6C2300A636FB /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B242A5E6C2300A636FB /* Label.swift */; };
@@ -72,6 +74,8 @@
 		042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPageViewController.swift; sourceTree = "<group>"; };
+		0438B3992A617307000C3701 /* AlbumviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumviewViewController.swift; sourceTree = "<group>"; };
+		045C90182A61710000ADD41A /* SearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableView.swift; sourceTree = "<group>"; };
 		04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		04718B222A5E6B4600A636FB /* SearchPageConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageConstraint.swift; sourceTree = "<group>"; };
 		04718B242A5E6C2300A636FB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		042B995A2A5A088B005E2FBC /* Alamofire_ */ = {
 			isa = PBXGroup;
 			children = (
+				045C90172A6170CC00ADD41A /* ProtocolDelegates */,
 				04A5DF562A5D0F5E0011F70C /* Extensions */,
 				04A5DF532A5CE2720011F70C /* ReusableViews */,
 				042B99A62A5CDA82005E2FBC /* Cordinator */,
@@ -182,7 +187,7 @@
 				042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */,
 				042B998B2A5A097E005E2FBC /* HomePageViewController.swift */,
 				042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */,
-				042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */,
+				0438B3982A6172A3000C3701 /* SearchPages */,
 				042B99982A5BCE84005E2FBC /* Cells */,
 			);
 			path = Controllers;
@@ -227,6 +232,23 @@
 				04018C962A5CDE0F002FF85F /* AppCordinator.swift */,
 			);
 			path = Cordinator;
+			sourceTree = "<group>";
+		};
+		0438B3982A6172A3000C3701 /* SearchPages */ = {
+			isa = PBXGroup;
+			children = (
+				042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */,
+				0438B3992A617307000C3701 /* AlbumviewViewController.swift */,
+			);
+			path = SearchPages;
+			sourceTree = "<group>";
+		};
+		045C90172A6170CC00ADD41A /* ProtocolDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				045C90182A61710000ADD41A /* SearchTableView.swift */,
+			);
+			path = ProtocolDelegates;
 			sourceTree = "<group>";
 		};
 		04A5DF532A5CE2720011F70C /* ReusableViews */ = {
@@ -393,6 +415,7 @@
 				042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */,
 				042B99602A5A088B005E2FBC /* ViewController.swift in Sources */,
 				042B995C2A5A088B005E2FBC /* AppDelegate.swift in Sources */,
+				045C90192A61710000ADD41A /* SearchTableView.swift in Sources */,
 				04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */,
 				042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */,
 				04718B272A5E72D400A636FB /* SearchTableViewCell.swift in Sources */,
@@ -403,6 +426,7 @@
 				04A5DF582A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift in Sources */,
 				04718B252A5E6C2300A636FB /* Label.swift in Sources */,
 				042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */,
+				0438B39A2A617307000C3701 /* AlbumviewViewController.swift in Sources */,
 				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
 				04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */,
 			);

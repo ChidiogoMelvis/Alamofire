@@ -40,5 +40,4 @@ class SearchPageViewController: UIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
     }
     
-
 }
