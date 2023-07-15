@@ -28,4 +28,16 @@ extension SearchPageViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 170, height: 100)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            if indexPath.item < 2 {
+                let viewController = AlbumviewViewController()
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+        default:
+            break
+        }
+    }
 }

@@ -25,7 +25,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 30, left: 5, bottom: 30, right: 5)
+        layout.sectionInset = UIEdgeInsets(top: 30, left: 8, bottom: 30, right: 8)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.translatesAutoresizingMaskIntoConstraints = false
