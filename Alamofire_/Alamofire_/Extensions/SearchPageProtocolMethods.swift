@@ -10,37 +10,22 @@ import UIKit
 
 extension SearchPageViewController {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return temporalData.count
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 5
+        
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return temporalSections.count
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
-        guard indexPath.section < temporalData.count else {
-                return cell
-            }
-            let section = temporalData[indexPath.section]
-            
-            guard indexPath.row < section.count else {
-                return cell
-            }
-            let rowData = section[indexPath.row]
-            cell.textLabel?.text = "\(rowData)"
-            
-        cell.backgroundColor = .gray
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
+        cell.backgroundColor = .lightGray
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            return temporalSections[section]
-        }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 134
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 170, height: 100)
     }
-    
 }

@@ -7,11 +7,7 @@
 
 import UIKit
 
-class SearchPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let temporalSections = ["Section 1", "Section 2", "Section 3"]
-    
-    let temporalData = [["1", "2"], ["3", "4", "5"], ["6", "7", "8", "9"]]
+class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let searchLabel = Label(label: "Search")
     
@@ -24,14 +20,19 @@ class SearchPageViewController: UIViewController, UITableViewDelegate, UITableVi
         return search
 }()
 
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.backgroundColor = .gray
-        tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchTableViewCell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
+    lazy var searchCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        layout.sectionInset = UIEdgeInsets(top: 30, left: 5, bottom: 30, right: 5)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.collectionViewLayout = layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: "SearchCollectionViewCell")
+        return collectionView
     }()
     
     override func viewDidLoad() {

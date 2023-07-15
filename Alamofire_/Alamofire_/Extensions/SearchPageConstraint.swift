@@ -13,7 +13,7 @@ extension SearchPageViewController {
         view.addSubview(searchLabel)
         view.addSubview(cameraButton)
         view.addSubview(searchBar)
-        view.addSubview(tableView)
+        view.addSubview(searchCollectionView)
         
         NSLayoutConstraint.activate([
             searchLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
@@ -26,10 +26,10 @@ extension SearchPageViewController {
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             
-            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 20),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
+            searchCollectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 20),
+            searchCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
+            searchCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
+            searchCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
             
         ])
     }

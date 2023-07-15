@@ -28,7 +28,6 @@
 		04718B212A5E210B00A636FB /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */; };
 		04718B232A5E6B4600A636FB /* SearchPageConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B222A5E6B4600A636FB /* SearchPageConstraint.swift */; };
 		04718B252A5E6C2300A636FB /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B242A5E6C2300A636FB /* Label.swift */; };
-		04718B272A5E72D400A636FB /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B262A5E72D400A636FB /* SearchTableViewCell.swift */; };
 		04718B292A5E735300A636FB /* SearchPageProtocolMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B282A5E735300A636FB /* SearchPageProtocolMethods.swift */; };
 		04A5DF552A5CF39F0011F70C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF542A5CF39F0011F70C /* Button.swift */; };
 		04A5DF582A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF572A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift */; };
@@ -37,6 +36,7 @@
 		04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */; };
 		04DF09372A6182F60023D035 /* AlbumControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF09362A6182F60023D035 /* AlbumControlViewController.swift */; };
 		04DF09392A6183170023D035 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF09382A6183170023D035 /* TrackViewController.swift */; };
+		04DF093C2A62518E0023D035 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,6 @@
 		04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		04718B222A5E6B4600A636FB /* SearchPageConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageConstraint.swift; sourceTree = "<group>"; };
 		04718B242A5E6C2300A636FB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
-		04718B262A5E72D400A636FB /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		04718B282A5E735300A636FB /* SearchPageProtocolMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageProtocolMethods.swift; sourceTree = "<group>"; };
 		04A5DF542A5CF39F0011F70C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		04A5DF572A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCollectionViewProtocolMethods.swift; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongCollectionViewCell.swift; sourceTree = "<group>"; };
 		04DF09362A6182F60023D035 /* AlbumControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumControlViewController.swift; sourceTree = "<group>"; };
 		04DF09382A6183170023D035 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 				04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */,
 				04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */,
 				04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */,
-				04718B262A5E72D400A636FB /* SearchTableViewCell.swift */,
+				04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -432,10 +432,10 @@
 				045C90192A61710000ADD41A /* SearchTableView.swift in Sources */,
 				04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */,
 				042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */,
-				04718B272A5E72D400A636FB /* SearchTableViewCell.swift in Sources */,
 				04718B292A5E735300A636FB /* SearchPageProtocolMethods.swift in Sources */,
 				042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */,
 				042B998E2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift in Sources */,
+				04DF093C2A62518E0023D035 /* SearchCollectionViewCell.swift in Sources */,
 				042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */,
 				04DF09392A6183170023D035 /* TrackViewController.swift in Sources */,
 				04DF09372A6182F60023D035 /* AlbumControlViewController.swift in Sources */,
