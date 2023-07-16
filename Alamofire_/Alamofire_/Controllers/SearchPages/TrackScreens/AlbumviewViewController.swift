@@ -21,6 +21,7 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
     
