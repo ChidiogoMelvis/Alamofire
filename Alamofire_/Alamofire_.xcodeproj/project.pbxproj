@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04018C972A5CDE0F002FF85F /* AppCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04018C962A5CDE0F002FF85F /* AppCordinator.swift */; };
+		04018C972A5CDE0F002FF85F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04018C962A5CDE0F002FF85F /* AppCoordinator.swift */; };
 		042B995C2A5A088B005E2FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B995B2A5A088B005E2FBC /* AppDelegate.swift */; };
 		042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B995D2A5A088B005E2FBC /* SceneDelegate.swift */; };
 		042B99602A5A088B005E2FBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B995F2A5A088B005E2FBC /* ViewController.swift */; };
@@ -37,6 +37,9 @@
 		04DF09372A6182F60023D035 /* AlbumControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF09362A6182F60023D035 /* AlbumControlViewController.swift */; };
 		04DF09392A6183170023D035 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF09382A6183170023D035 /* TrackViewController.swift */; };
 		04DF093C2A62518E0023D035 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */; };
+		04DF093F2A6387260023D035 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF093E2A6387260023D035 /* Protocol.swift */; };
+		04DF09422A638ECD0023D035 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF09412A638ECD0023D035 /* AlbumTableViewCell.swift */; };
+		04DF09442A638F810023D035 /* AlbumviewViewcontrollerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF09432A638F810023D035 /* AlbumviewViewcontrollerConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04018C962A5CDE0F002FF85F /* AppCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCordinator.swift; sourceTree = "<group>"; };
+		04018C962A5CDE0F002FF85F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		042B99582A5A088B005E2FBC /* Alamofire_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alamofire_.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B995B2A5A088B005E2FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		042B995D2A5A088B005E2FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +93,9 @@
 		04DF09362A6182F60023D035 /* AlbumControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumControlViewController.swift; sourceTree = "<group>"; };
 		04DF09382A6183170023D035 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		04DF093E2A6387260023D035 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		04DF09412A638ECD0023D035 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		04DF09432A638F810023D035 /* AlbumviewViewcontrollerConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumviewViewcontrollerConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 				04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */,
 				04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */,
 				04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */,
+				04DF09412A638ECD0023D035 /* AlbumTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -233,7 +240,8 @@
 		042B99A62A5CDA82005E2FBC /* Cordinator */ = {
 			isa = PBXGroup;
 			children = (
-				04018C962A5CDE0F002FF85F /* AppCordinator.swift */,
+				04018C962A5CDE0F002FF85F /* AppCoordinator.swift */,
+				04DF09402A63872C0023D035 /* Protocol */,
 			);
 			path = Cordinator;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				04A5DF572A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift */,
+				04DF09432A638F810023D035 /* AlbumviewViewcontrollerConstraint.swift */,
 				04718B282A5E735300A636FB /* SearchPageProtocolMethods.swift */,
 				04718B222A5E6B4600A636FB /* SearchPageConstraint.swift */,
 				04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */,
@@ -283,6 +292,14 @@
 				04DF09382A6183170023D035 /* TrackViewController.swift */,
 			);
 			path = TrackScreens;
+			sourceTree = "<group>";
+		};
+		04DF09402A63872C0023D035 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04DF093E2A6387260023D035 /* Protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,10 +439,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04718B232A5E6B4600A636FB /* SearchPageConstraint.swift in Sources */,
-				04018C972A5CDE0F002FF85F /* AppCordinator.swift in Sources */,
+				04018C972A5CDE0F002FF85F /* AppCoordinator.swift in Sources */,
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,
 				04718B212A5E210B00A636FB /* ReviewCollectionViewCell.swift in Sources */,
 				04A5DF622A5D7E960011F70C /* EditorsCollectionViewCell.swift in Sources */,
+				04DF09442A638F810023D035 /* AlbumviewViewcontrollerConstraint.swift in Sources */,
 				042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */,
 				042B99602A5A088B005E2FBC /* ViewController.swift in Sources */,
 				042B995C2A5A088B005E2FBC /* AppDelegate.swift in Sources */,
@@ -435,6 +453,7 @@
 				04718B292A5E735300A636FB /* SearchPageProtocolMethods.swift in Sources */,
 				042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */,
 				042B998E2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift in Sources */,
+				04DF093F2A6387260023D035 /* Protocol.swift in Sources */,
 				04DF093C2A62518E0023D035 /* SearchCollectionViewCell.swift in Sources */,
 				042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */,
 				04DF09392A6183170023D035 /* TrackViewController.swift in Sources */,
@@ -443,6 +462,7 @@
 				04718B252A5E6C2300A636FB /* Label.swift in Sources */,
 				042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */,
 				0438B39A2A617307000C3701 /* AlbumviewViewController.swift in Sources */,
+				04DF09422A638ECD0023D035 /* AlbumTableViewCell.swift in Sources */,
 				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
 				04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */,
 			);
