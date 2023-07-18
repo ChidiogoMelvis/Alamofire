@@ -7,7 +7,9 @@
 
 import UIKit
 
-class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlbumTableViewButtonsDelegate {
+    
+    //var delegate: AlbumTableViewButtonsDelegate!
     
     lazy var albumTableView: UITableView = {
         let tableView = UITableView()
@@ -33,8 +35,16 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumTableViewCell", for: indexPath) as! AlbumTableViewCell
         cell.menuButtonCell.setImage(UIImage(named: "menu"), for: .normal)
-    
+        cell.delegate = self
         return cell
     }
+    
+    func presentView( cell: AlbumTableViewCell) {
+            let vc = AlbumControlViewController()
+            vc.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }
 

@@ -11,6 +11,8 @@ class AlbumTableViewCell: UITableViewCell {
     
     let identifier = "AlbumTableViewCell"
     
+    var delegate: AlbumTableViewButtonsDelegate!
+    
     var menuButtonCell = Button(image: UIImage(named: ""))
 
     override func awakeFromNib() {
@@ -21,7 +23,12 @@ class AlbumTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
+        menuButtonCell.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
         // Configure the view for the selected state
+    }
+    
+    @objc func btnTapped() {
+        self.delegate.presentView(cell: self)
     }
     
     func setupViews() {
