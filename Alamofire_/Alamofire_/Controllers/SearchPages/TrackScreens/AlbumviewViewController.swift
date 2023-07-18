@@ -14,6 +14,7 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        //tableView.backgroundColor = .brown
         tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "AlbumTableViewCell")
         return tableView
     }()
@@ -31,6 +32,9 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumTableViewCell", for: indexPath) as! AlbumTableViewCell
+        cell.menuButtonCell.setImage(UIImage(named: "menu"), for: .normal)
+    
         return cell
     }
 }
+

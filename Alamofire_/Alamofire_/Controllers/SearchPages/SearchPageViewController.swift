@@ -11,7 +11,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let searchLabel = Label(label: "Search")
     
-    let cameraButton = Button(image: "camera")
+    let cameraButton = Button(image: UIImage(named: "camera"))
     
     lazy var searchBar: UISearchBar = {
         let search = UISearchBar()

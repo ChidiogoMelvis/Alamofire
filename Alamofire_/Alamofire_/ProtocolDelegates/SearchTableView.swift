@@ -12,3 +12,7 @@ protocol SearchTableViewCellDelegate {
     func didSelectRow(_vc: UIViewController)
 }
 
+protocol AlbumViewButtonsDelegate{
+    func presentView(at index: IndexPath)
+}
+

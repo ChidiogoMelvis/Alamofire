@@ -9,16 +9,14 @@ import UIKit
 
 
 class Button: UIButton {
-
-//    override init(frame String: CGRect) {
-//    super.init(frame: frame)
-    init(image: String) {
+    
+    init(image: UIImage?) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
-    self.setImage(UIImage(named: image), for: .normal)
+    self.setImage(image, for: .normal)
 }
 
 required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-}
+    }
 }
