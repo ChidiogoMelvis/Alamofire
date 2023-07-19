@@ -7,15 +7,17 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
-    var navigationController: UINavigationController
+class AppCoordinator: CoordinatorDelegate {
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-    func start() {
-        
+    private let window: UIWindow
+    private var navigationController: UINavigationController?
+    
+    init(window: UIWindow) {
+        self.window = window
     }
     
-
+    func navigateToDetail() {
+        <#code#>
+    }
+    
 }
