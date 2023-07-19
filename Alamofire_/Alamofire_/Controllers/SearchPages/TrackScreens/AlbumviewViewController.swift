@@ -44,7 +44,5 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
             vc.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }
 
