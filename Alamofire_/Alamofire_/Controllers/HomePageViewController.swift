@@ -101,6 +101,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        title = "Home"
     }
 
 }

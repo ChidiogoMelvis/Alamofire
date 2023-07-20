@@ -8,16 +8,15 @@
 import UIKit
 
 class AppCoordinator: CoordinatorDelegate {
+    var navigationController: UINavigationController?
     
-    private let window: UIWindow
-    private var navigationController: UINavigationController?
+    init(navigationController: UINavigationController) {
+            self.navigationController = navigationController
+        }
     
-    init(window: UIWindow) {
-        self.window = window
-    }
-    
-    func navigateToDetail() {
-        <#code#>
+    func start() {
+        let vc = TabBarViewController.init()
+        navigationController?.pushViewController(vc, animated: false)
     }
     
 }

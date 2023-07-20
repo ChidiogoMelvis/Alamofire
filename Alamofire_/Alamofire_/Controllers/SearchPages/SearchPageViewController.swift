@@ -38,6 +38,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        title = "Search"
         // Do any additional setup after loading the view.
     }
     

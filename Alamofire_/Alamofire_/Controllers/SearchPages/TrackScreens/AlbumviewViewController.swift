@@ -25,6 +25,7 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         setupViews()
         view.backgroundColor = .white
+        title = "AlbumView"
         // Do any additional setup after loading the view.
     }
     

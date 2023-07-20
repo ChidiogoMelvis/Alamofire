@@ -7,6 +7,16 @@
 
 import UIKit
 
+enum Event {
+    case btnTapped
+}
+
 protocol CoordinatorDelegate: AnyObject {
-    func navigateToDetail()
+    var navigationController: UINavigationController? { get set }
+    
+    func start()
+}
+
+protocol Coordinating {
+    var coordinator: CoordinatorDelegate { get set}
 }
