@@ -9,8 +9,6 @@ import UIKit
 
 class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlbumTableViewButtonsDelegate {
     
-    //var delegate: AlbumTableViewButtonsDelegate!
-    
     let topView = CustomView(view: UIImage(named: ""), color: .lightGray)
     
     lazy var albumTableView: UITableView = {
@@ -27,8 +25,6 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         setupViews()
         view.backgroundColor = .white
-        //title = "AlbumView"
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,11 +38,20 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! AlbumTableViewCell
+        cell.isSelected = false
+        let destinationVC = TrackViewController()
+        navigationController?.pushViewController(destinationVC, animated: false)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     func presentView( cell: AlbumTableViewCell) {
             let vc = EllipsisViewController()
             vc.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
+    
 }
 

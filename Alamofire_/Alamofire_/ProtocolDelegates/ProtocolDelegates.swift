@@ -15,4 +15,3 @@ protocol SearchTableViewCellDelegate {
 protocol AlbumTableViewButtonsDelegate{
     func presentView(cell: AlbumTableViewCell)
 }
-

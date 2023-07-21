@@ -32,7 +32,7 @@ extension SearchPageViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-            if indexPath.item < 2 {
+            if indexPath.item < 1 {
                 let viewController = AlbumviewViewController()
                 navigationController?.pushViewController(viewController, animated: true)
                 self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

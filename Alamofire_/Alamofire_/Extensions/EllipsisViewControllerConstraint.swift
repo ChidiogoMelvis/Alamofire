@@ -14,7 +14,7 @@ extension EllipsisViewController {
         view.addSubview(ellipsisTableView)
         
         NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            topView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
             topView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
             topView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
             topView.heightAnchor.constraint(equalToConstant: 150),
