@@ -11,6 +11,8 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //var delegate: AlbumTableViewButtonsDelegate!
     
+    let topView = CustomView(view: UIImage(named: ""), color: .lightGray)
+    
     lazy var albumTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +27,7 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         setupViews()
         view.backgroundColor = .white
-        title = "AlbumView"
+        //title = "AlbumView"
         // Do any additional setup after loading the view.
     }
     
@@ -41,9 +43,10 @@ class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func presentView( cell: AlbumTableViewCell) {
-            let vc = AlbumControlViewController()
+            let vc = EllipsisViewController()
             vc.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc, animated: true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 

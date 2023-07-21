@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum Event {
-    case btnTapped
-}
-
 protocol CoordinatorDelegate: AnyObject {
     var navigationController: UINavigationController? { get set }
     

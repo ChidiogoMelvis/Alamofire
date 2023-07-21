@@ -35,6 +35,7 @@ extension SearchPageViewController {
             if indexPath.item < 2 {
                 let viewController = AlbumviewViewController()
                 navigationController?.pushViewController(viewController, animated: true)
+                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             }
         default:
             break
