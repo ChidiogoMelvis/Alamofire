@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlbumTableViewButtonsDelegate {
+class RecentlyPlayedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlbumTableViewButtonsDelegate {
     
     let topView = CustomView(view: UIImage(named: ""), color: .lightGray)
     

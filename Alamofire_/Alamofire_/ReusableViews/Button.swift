@@ -10,7 +10,7 @@ import UIKit
 
 class Button: UIButton {
     
-    init(image: UIImage?) {
+    init(image: UIImage?,label: String, btnColor: UIColor) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
     self.setImage(image, for: .normal)

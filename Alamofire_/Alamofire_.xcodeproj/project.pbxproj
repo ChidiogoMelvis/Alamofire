@@ -23,8 +23,9 @@
 		042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */; };
 		042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */; };
 		042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */; };
-		0438B39A2A617307000C3701 /* AlbumviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438B3992A617307000C3701 /* AlbumviewViewController.swift */; };
+		0438B39A2A617307000C3701 /* RecentlyPlayedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438B3992A617307000C3701 /* RecentlyPlayedViewController.swift */; };
 		045C90192A61710000ADD41A /* ProtocolDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C90182A61710000ADD41A /* ProtocolDelegates.swift */; };
+		046391462A6A46C500DB861F /* IndiePopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046391452A6A46C500DB861F /* IndiePopViewController.swift */; };
 		046586472A6A06CC0056678A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046586462A6A06CC0056678A /* CustomView.swift */; };
 		046586492A6A0ACE0056678A /* EllipsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */; };
 		0465864B2A6A0C790056678A /* EllipsisViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */; };
@@ -82,8 +83,9 @@
 		042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPageViewController.swift; sourceTree = "<group>"; };
-		0438B3992A617307000C3701 /* AlbumviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumviewViewController.swift; sourceTree = "<group>"; };
+		0438B3992A617307000C3701 /* RecentlyPlayedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedViewController.swift; sourceTree = "<group>"; };
 		045C90182A61710000ADD41A /* ProtocolDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDelegates.swift; sourceTree = "<group>"; };
+		046391452A6A46C500DB861F /* IndiePopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiePopViewController.swift; sourceTree = "<group>"; };
 		046586462A6A06CC0056678A /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisTableViewCell.swift; sourceTree = "<group>"; };
 		0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisViewControllerConstraint.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */,
+				046391442A6A469300DB861F /* IndiePopScreens */,
 				04DF093A2A6183360023D035 /* TrackScreens */,
 			);
 			path = SearchPages;
@@ -268,6 +271,14 @@
 				045C90182A61710000ADD41A /* ProtocolDelegates.swift */,
 			);
 			path = ProtocolDelegates;
+			sourceTree = "<group>";
+		};
+		046391442A6A469300DB861F /* IndiePopScreens */ = {
+			isa = PBXGroup;
+			children = (
+				046391452A6A46C500DB861F /* IndiePopViewController.swift */,
+			);
+			path = IndiePopScreens;
 			sourceTree = "<group>";
 		};
 		04A5DF532A5CE2720011F70C /* ReusableViews */ = {
@@ -296,7 +307,7 @@
 		04DF093A2A6183360023D035 /* TrackScreens */ = {
 			isa = PBXGroup;
 			children = (
-				0438B3992A617307000C3701 /* AlbumviewViewController.swift */,
+				0438B3992A617307000C3701 /* RecentlyPlayedViewController.swift */,
 				04DF09362A6182F60023D035 /* EllipsisViewController.swift */,
 				04DF09382A6183170023D035 /* TrackViewController.swift */,
 			);
@@ -473,7 +484,8 @@
 				04A5DF582A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift in Sources */,
 				04718B252A5E6C2300A636FB /* Label.swift in Sources */,
 				042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */,
-				0438B39A2A617307000C3701 /* AlbumviewViewController.swift in Sources */,
+				0438B39A2A617307000C3701 /* RecentlyPlayedViewController.swift in Sources */,
+				046391462A6A46C500DB861F /* IndiePopViewController.swift in Sources */,
 				04DF09422A638ECD0023D035 /* AlbumTableViewCell.swift in Sources */,
 				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
 				04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */,

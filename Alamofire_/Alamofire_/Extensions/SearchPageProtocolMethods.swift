@@ -33,7 +33,11 @@ extension SearchPageViewController {
         switch indexPath.section {
         case 0:
             if indexPath.item < 1 {
-                let viewController = AlbumviewViewController()
+                let viewController = RecentlyPlayedViewController()
+                navigationController?.pushViewController(viewController, animated: true)
+                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            } else if indexPath.item == 1 {
+                let viewController = IndiePopViewController()
                 navigationController?.pushViewController(viewController, animated: true)
                 self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             }

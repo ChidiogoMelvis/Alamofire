@@ -13,7 +13,7 @@ class AlbumTableViewCell: UITableViewCell {
     
     var delegate: AlbumTableViewButtonsDelegate!
     
-    var menuButtonCell = Button(image: UIImage(named: ""))
+    var menuButtonCell = Button(image: UIImage(named: ""),  label: "", btnColor: .clear)
 
     override func awakeFromNib() {
         super.awakeFromNib()
