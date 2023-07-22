@@ -15,3 +15,7 @@ protocol SearchTableViewCellDelegate {
 protocol AlbumTableViewButtonsDelegate{
     func presentView(cell: AlbumTableViewCell)
 }
+
+protocol TopSongCollectionViewDelegate{
+    func presentView(cell: TopSongCollectionViewCell)
+}

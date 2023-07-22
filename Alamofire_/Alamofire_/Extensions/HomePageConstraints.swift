@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension HomePageViewController {
-
         func setupViews() {
             view.addSubview(stackView)
             view.addSubview(scrollView)
