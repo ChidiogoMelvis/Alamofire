@@ -13,13 +13,13 @@ extension HomePageViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case recentlyPlayedCollectionView:
-            return 3
+            return 7
         case reviewCollectionView:
-            return 4
+            return 8
         case topSongCollectionView:
-            return 3
+            return 5
         case editorsCollectionView:
-            return 4
+            return 9
         default:
             return 0
         }
@@ -34,7 +34,7 @@ extension HomePageViewController {
         case recentlyPlayedCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
             cell.backgroundColor = .brown
-            cell.layer.cornerRadius = 75
+            cell.layer.cornerRadius = 50
             return cell
         case reviewCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as! ReviewCollectionViewCell
@@ -56,13 +56,13 @@ extension HomePageViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case recentlyPlayedCollectionView:
-            return CGSize(width: 150, height: 150)
+            return CGSize(width: 100, height: 100)
         case reviewCollectionView:
-            return CGSize(width: 200, height: 200)
+            return CGSize(width: 100, height: 100)
         case topSongCollectionView:
-            return CGSize(width: 200, height: 200)
+            return CGSize(width: 100, height: 100)
         case editorsCollectionView:
-            return CGSize(width: 200, height: 200)
+            return CGSize(width: 100, height: 100)
         default:
             return CGSize(width: 50, height: 50)
         }

@@ -26,6 +26,7 @@
 		0438B39A2A617307000C3701 /* RecentlyPlayedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438B3992A617307000C3701 /* RecentlyPlayedViewController.swift */; };
 		045C90192A61710000ADD41A /* ProtocolDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C90182A61710000ADD41A /* ProtocolDelegates.swift */; };
 		046391462A6A46C500DB861F /* IndiePopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046391452A6A46C500DB861F /* IndiePopViewController.swift */; };
+		046391482A6C593800DB861F /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046391472A6C593800DB861F /* LibraryTableViewCell.swift */; };
 		046586472A6A06CC0056678A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046586462A6A06CC0056678A /* CustomView.swift */; };
 		046586492A6A0ACE0056678A /* EllipsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */; };
 		0465864B2A6A0C790056678A /* EllipsisViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */; };
@@ -86,6 +87,7 @@
 		0438B3992A617307000C3701 /* RecentlyPlayedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedViewController.swift; sourceTree = "<group>"; };
 		045C90182A61710000ADD41A /* ProtocolDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDelegates.swift; sourceTree = "<group>"; };
 		046391452A6A46C500DB861F /* IndiePopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiePopViewController.swift; sourceTree = "<group>"; };
+		046391472A6C593800DB861F /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		046586462A6A06CC0056678A /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisTableViewCell.swift; sourceTree = "<group>"; };
 		0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisViewControllerConstraint.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				042B998D2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift */,
+				046391472A6C593800DB861F /* LibraryTableViewCell.swift */,
 				04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */,
 				04718B202A5E210B00A636FB /* ReviewCollectionViewCell.swift */,
 				04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */,
@@ -471,6 +474,7 @@
 				045C90192A61710000ADD41A /* ProtocolDelegates.swift in Sources */,
 				04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */,
 				042B999F2A5CD18E005E2FBC /* TabBarViewController.swift in Sources */,
+				046391482A6C593800DB861F /* LibraryTableViewCell.swift in Sources */,
 				04718B292A5E735300A636FB /* SearchPageProtocolMethods.swift in Sources */,
 				042B99A32A5CD203005E2FBC /* LibraryPageViewController.swift in Sources */,
 				042B998E2A5A09A9005E2FBC /* RecentlyPlayedCollectionViewCell.swift in Sources */,

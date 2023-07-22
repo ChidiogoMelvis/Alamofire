@@ -42,25 +42,25 @@ extension HomePageViewController {
                 recentlyPlayedCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
                 recentlyPlayedCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 recentlyPlayedCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-                recentlyPlayedCollectionView.heightAnchor.constraint(equalToConstant: 150),
+                recentlyPlayedCollectionView.heightAnchor.constraint(equalToConstant: 110),
                 
                 reviewCollectionView.topAnchor.constraint(equalTo: recentlyPlayedCollectionView.bottomAnchor, constant: 50),
                 reviewCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
                 reviewCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 reviewCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-                reviewCollectionView.heightAnchor.constraint(equalToConstant: 200),
+                reviewCollectionView.heightAnchor.constraint(equalToConstant: 110),
                 
                 topSongCollectionView.topAnchor.constraint(equalTo: reviewCollectionView.bottomAnchor, constant: 50),
                 topSongCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
                 topSongCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 topSongCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-                topSongCollectionView.heightAnchor.constraint(equalToConstant: 200),
+                topSongCollectionView.heightAnchor.constraint(equalToConstant: 110),
                 
                 editorsCollectionView.topAnchor.constraint(equalTo: topSongCollectionView.bottomAnchor, constant: 50),
                 editorsCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
                 editorsCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 editorsCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-                editorsCollectionView.heightAnchor.constraint(equalToConstant: 200)
+                editorsCollectionView.heightAnchor.constraint(equalToConstant: 110)
             ])
         }
 
