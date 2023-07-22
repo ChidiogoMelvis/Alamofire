@@ -20,9 +20,7 @@ class IndiePopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .white
         setupViews()
-        // Do any additional setup after loading the view.
     }
     
     func setupViews() {
