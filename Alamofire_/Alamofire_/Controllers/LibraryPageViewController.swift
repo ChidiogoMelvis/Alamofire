@@ -21,8 +21,13 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setTitleColor()
         title = "Library"
         // Do any additional setup after loading the view.
+    }
+    
+    func setTitleColor() {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,11 +39,15 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
     func setupViews() {
         view.addSubview(libraryTableView)
         
         NSLayoutConstraint.activate([
-            libraryTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            libraryTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             libraryTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             libraryTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             libraryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)

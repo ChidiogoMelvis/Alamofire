@@ -39,14 +39,17 @@ extension HomePageViewController {
         case reviewCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as! ReviewCollectionViewCell
             cell.backgroundColor = .lightGray
+            cell.layer.cornerRadius = 10
             return cell
         case topSongCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopSongCollectionViewCell", for: indexPath) as! TopSongCollectionViewCell
             cell.backgroundColor = .gray
+            cell.layer.cornerRadius = 10
             return cell
         case editorsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorsCollectionViewCell
             cell.backgroundColor = .brown
+            cell.layer.cornerRadius = 10
             return cell
         default:
             return UICollectionViewCell()
