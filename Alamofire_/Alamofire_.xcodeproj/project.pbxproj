@@ -27,6 +27,7 @@
 		045C90192A61710000ADD41A /* ProtocolDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C90182A61710000ADD41A /* ProtocolDelegates.swift */; };
 		046391462A6A46C500DB861F /* IndiePopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046391452A6A46C500DB861F /* IndiePopViewController.swift */; };
 		046391482A6C593800DB861F /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046391472A6C593800DB861F /* LibraryTableViewCell.swift */; };
+		0463914B2A6CCA5100DB861F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463914A2A6CCA5100DB861F /* Model.swift */; };
 		046586472A6A06CC0056678A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046586462A6A06CC0056678A /* CustomView.swift */; };
 		046586492A6A0ACE0056678A /* EllipsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */; };
 		0465864B2A6A0C790056678A /* EllipsisViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */; };
@@ -88,6 +89,7 @@
 		045C90182A61710000ADD41A /* ProtocolDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDelegates.swift; sourceTree = "<group>"; };
 		046391452A6A46C500DB861F /* IndiePopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiePopViewController.swift; sourceTree = "<group>"; };
 		046391472A6C593800DB861F /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		0463914A2A6CCA5100DB861F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		046586462A6A06CC0056678A /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisTableViewCell.swift; sourceTree = "<group>"; };
 		0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisViewControllerConstraint.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				042B99922A5A0A92005E2FBC /* NetworkCall.swift */,
+				046391492A6CCA3C00DB861F /* Model */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -282,6 +285,14 @@
 				046391452A6A46C500DB861F /* IndiePopViewController.swift */,
 			);
 			path = IndiePopScreens;
+			sourceTree = "<group>";
+		};
+		046391492A6CCA3C00DB861F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0463914A2A6CCA5100DB861F /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		04A5DF532A5CE2720011F70C /* ReusableViews */ = {
@@ -491,6 +502,7 @@
 				0438B39A2A617307000C3701 /* RecentlyPlayedViewController.swift in Sources */,
 				046391462A6A46C500DB861F /* IndiePopViewController.swift in Sources */,
 				04DF09422A638ECD0023D035 /* AlbumTableViewCell.swift in Sources */,
+				0463914B2A6CCA5100DB861F /* Model.swift in Sources */,
 				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
 				04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */,
 			);

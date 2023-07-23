@@ -7,3 +7,10 @@
 
 import Foundation
 import Alamofire
+
+class Networking {
+    
+    func makeNetworkRequest() {
+        
+    }
+}
