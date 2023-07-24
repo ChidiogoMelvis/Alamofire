@@ -11,7 +11,7 @@ import Alamofire
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    //var networking = Networking()
+    var networking = Networking()
     
     var notificationButton = Button(image: UIImage(named: "notification"),  label: "", btnColor: .clear)
     
@@ -107,6 +107,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         setupViews()
         setTitleColor()
         title = "Home"
+        networking.fetchPodcasts()
         
     }
     

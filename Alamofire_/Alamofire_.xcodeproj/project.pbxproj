@@ -32,6 +32,7 @@
 		046586492A6A0ACE0056678A /* EllipsisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */; };
 		0465864B2A6A0C790056678A /* EllipsisViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */; };
 		047034312A6E23B8002CA52D /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047034302A6E23B8002CA52D /* PlaylistModel.swift */; };
+		047034352A6E42E0002CA52D /* CustomCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047034342A6E42E0002CA52D /* CustomCollectionReusableView.swift */; };
 		04718B212A5E210B00A636FB /* ReviewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B202A5E210B00A636FB /* ReviewsCollectionViewCell.swift */; };
 		04718B232A5E6B4600A636FB /* SearchPageConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B222A5E6B4600A636FB /* SearchPageConstraint.swift */; };
 		04718B252A5E6C2300A636FB /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B242A5E6C2300A636FB /* Label.swift */; };
@@ -95,6 +96,7 @@
 		046586482A6A0ACE0056678A /* EllipsisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisTableViewCell.swift; sourceTree = "<group>"; };
 		0465864A2A6A0C790056678A /* EllipsisViewControllerConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsisViewControllerConstraint.swift; sourceTree = "<group>"; };
 		047034302A6E23B8002CA52D /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
+		047034342A6E42E0002CA52D /* CustomCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionReusableView.swift; sourceTree = "<group>"; };
 		04718B202A5E210B00A636FB /* ReviewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		04718B222A5E6B4600A636FB /* SearchPageConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageConstraint.swift; sourceTree = "<group>"; };
 		04718B242A5E6C2300A636FB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			children = (
 				04A5DF542A5CF39F0011F70C /* Button.swift */,
 				046586462A6A06CC0056678A /* CustomView.swift */,
+				047034342A6E42E0002CA52D /* CustomCollectionReusableView.swift */,
 				04718B242A5E6C2300A636FB /* Label.swift */,
 			);
 			path = ReusableViews;
@@ -508,6 +511,7 @@
 				04DF09422A638ECD0023D035 /* AlbumTableViewCell.swift in Sources */,
 				0463914B2A6CCA5100DB861F /* PodcastModel.swift in Sources */,
 				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
+				047034352A6E42E0002CA52D /* CustomCollectionReusableView.swift in Sources */,
 				04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

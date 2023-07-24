@@ -24,7 +24,7 @@ class Podcast: Codable {
     let collectionName: String
     let trackName: String
     let artworkUrl100: String
-    let collectionViewURL: String
+    let collectionViewURL: String?
 
     enum CodingKeys: String, CodingKey {
         case artistName, collectionName, trackName, artworkUrl100, collectionViewURL
