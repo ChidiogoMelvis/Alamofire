@@ -19,7 +19,7 @@ class Playlist: Codable {
 // MARK: - Toptags
 class Toptags: Codable {
     let tag: [Tag]
-    let attr: Attr
+    let attr: Attr?
 
     enum CodingKeys: String, CodingKey {
         case tag
