@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Welcome
-class Tracks: Codable {
+class Playlist: Codable {
     let toptags: Toptags
 
     init(toptags: Toptags) {
