@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomCollectionReusableView: UICollectionReusableView {
+class RecentlyPlayed: UICollectionReusableView {
       let identifier = "CustomCollectionReusableView"
     
     let label = Label(label: "", textColor: .white)
