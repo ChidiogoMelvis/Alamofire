@@ -7,6 +7,6 @@
 
 import UIKit
 
-class ReviewCollectionViewCell: UICollectionViewCell {
+class ReviewsCollectionViewCell: UICollectionViewCell {
     let identifier = "ReviewCollectionViewCell"
 }

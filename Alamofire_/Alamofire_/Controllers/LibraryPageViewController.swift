@@ -36,6 +36,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryTableViewCell", for: indexPath) as! LibraryTableViewCell
+        cell.backgroundColor = .darkGray
         return cell
     }
     
@@ -47,10 +48,10 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         view.addSubview(libraryTableView)
         
         NSLayoutConstraint.activate([
-            libraryTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            libraryTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
             libraryTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             libraryTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            libraryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            libraryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
         ])
     }
 

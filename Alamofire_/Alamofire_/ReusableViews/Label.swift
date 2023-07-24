@@ -9,11 +9,11 @@ import UIKit
 
 class Label: UILabel {
 
-    init(label: String) {
+    init(label: String, textColor: UIColor) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.text = label
-        self.textColor = .white
+        self.textColor = textColor
         self.font = UIFont.systemFont(ofSize: 25, weight: .bold)
 }
 

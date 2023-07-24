@@ -14,7 +14,7 @@ extension HomePageViewController {
         switch collectionView {
         case recentlyPlayedCollectionView:
             return 7
-        case reviewCollectionView:
+        case reviewsCollectionView:
             return 8
         case topSongCollectionView:
             return 5
@@ -36,8 +36,8 @@ extension HomePageViewController {
             cell.backgroundColor = .brown
             cell.layer.cornerRadius = 50
             return cell
-        case reviewCollectionView:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as! ReviewCollectionViewCell
+        case reviewsCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as! ReviewsCollectionViewCell
             cell.backgroundColor = .lightGray
             cell.layer.cornerRadius = 10
             return cell
@@ -60,7 +60,7 @@ extension HomePageViewController {
         switch collectionView {
         case recentlyPlayedCollectionView:
             return CGSize(width: 100, height: 100)
-        case reviewCollectionView:
+        case reviewsCollectionView:
             return CGSize(width: 100, height: 100)
         case topSongCollectionView:
             return CGSize(width: 100, height: 100)
@@ -70,4 +70,5 @@ extension HomePageViewController {
             return CGSize(width: 50, height: 50)
         }
     }
+    
 }

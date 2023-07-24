@@ -11,7 +11,7 @@ import Alamofire
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var networking = Networking()
+    //var networking = Networking()
     
     var notificationButton = Button(image: UIImage(named: "notification"),  label: "", btnColor: .clear)
     
@@ -32,6 +32,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         return scrollView
     }()
     
@@ -56,7 +57,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         return collectionView
     }()
     
-    lazy var reviewCollectionView: UICollectionView = {
+    lazy var reviewsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 10
@@ -67,7 +68,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(ReviewCollectionViewCell.self, forCellWithReuseIdentifier: "ReviewCollectionViewCell")
+        collectionView.register(ReviewsCollectionViewCell.self, forCellWithReuseIdentifier: "ReviewCollectionViewCell")
         return collectionView
     }()
     
@@ -106,8 +107,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         setupViews()
         setTitleColor()
         title = "Home"
-        networking.makeNetworkRequest()
-
+        
     }
     
     func setTitleColor() {

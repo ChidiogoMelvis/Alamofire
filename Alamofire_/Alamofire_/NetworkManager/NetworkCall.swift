@@ -8,9 +8,11 @@
 import Foundation
 import Alamofire
 
-class Networking {
+class Networking  {
     
-    func makeNetworkRequest() {
-        
-    }
+    func fetchPodcasts()
+    {}
+    
+    func fetchPlaylist()
+    {}
 }

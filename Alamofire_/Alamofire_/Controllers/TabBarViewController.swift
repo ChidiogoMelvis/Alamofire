@@ -19,7 +19,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
-        view.backgroundColor = UIColor(named: "tabbarBackgroundColor")
+        view.backgroundColor = .black//UIColor(named: "tabbarBackgroundColor")
         delegate = self
         createSelectionIndicator()
     }

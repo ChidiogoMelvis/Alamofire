@@ -9,14 +9,14 @@ import UIKit
 
 class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let searchLabel = Label(label: "Search")
+    let searchLabel = Label(label: "Search", textColor: .white)
     
     let cameraButton = Button(image: UIImage(named: "camera"),  label: "", btnColor: .clear)
     
     lazy var searchBar: UISearchBar = {
         let search = UISearchBar()
         search.translatesAutoresizingMaskIntoConstraints = false
-        search.placeholder = "Artist, songs or podcasts"
+        search.placeholder = "Your favorites podcasts"
         return search
 }()
 
