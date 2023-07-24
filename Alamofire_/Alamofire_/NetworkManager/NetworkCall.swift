@@ -21,7 +21,7 @@ class Networking  {
                             print(podcast.collectionName)
                             print(podcast.trackName)
                             print(podcast.artworkUrl100)
-                            print(podcast.collectionViewURL)
+                            print(podcast.collectionViewURL as Any)
                         }
                     case .failure(let error):
                         print("Error fetching data: \(error)")
