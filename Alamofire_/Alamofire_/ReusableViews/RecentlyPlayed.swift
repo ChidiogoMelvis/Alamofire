@@ -8,7 +8,7 @@
 import UIKit
 
 class RecentlyPlayed: UICollectionReusableView {
-      let identifier = "CustomCollectionReusableView"
+      let identifier = "RecentlyPlayed"
     
     let label = Label(label: "", textColor: .white)
     
