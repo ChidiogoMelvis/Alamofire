@@ -35,7 +35,7 @@ extension HomePageViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
             let tag = tags[indexPath.item] 
                 cell.configure(with: tag)
-            //cell.backgroundColor = .brown
+            cell.backgroundColor = .brown
             cell.layer.cornerRadius = 50
             return cell
         case reviewsCollectionView:
