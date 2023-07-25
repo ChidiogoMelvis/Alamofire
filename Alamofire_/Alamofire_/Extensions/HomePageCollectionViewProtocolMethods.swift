@@ -13,7 +13,7 @@ extension HomePageViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case recentlyPlayedCollectionView:
-            return 7
+            return tags.count
         case reviewsCollectionView:
             return 8
         case topSongCollectionView:
@@ -33,7 +33,9 @@ extension HomePageViewController {
         switch collectionView {
         case recentlyPlayedCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
-            cell.backgroundColor = .brown
+            let tag = tags[indexPath.item] 
+                cell.configure(with: tag)
+            //cell.backgroundColor = .brown
             cell.layer.cornerRadius = 50
             return cell
         case reviewsCollectionView:

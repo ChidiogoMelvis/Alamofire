@@ -13,6 +13,8 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var networking = Networking()
     
+    var tags: [Tag] = []
+    
     var notificationButton = Button(image: UIImage(named: "notification"),  label: "", btnColor: .clear)
     
     var orientationButton = Button(image: UIImage(named: "orientationLock"),  label: "", btnColor: .clear)
@@ -101,7 +103,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.register(EditorsCollectionViewCell.self, forCellWithReuseIdentifier: "EditorCollectionViewCell")
         return collectionView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -109,12 +111,11 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         title = "Home"
         networking.fetchPodcasts()
         //networking.fetchPlaylist()
-        
     }
     
     func setTitleColor() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-
+    
 }
 
