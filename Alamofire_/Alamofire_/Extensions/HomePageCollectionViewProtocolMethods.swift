@@ -70,5 +70,4 @@ extension HomePageViewController {
             return CGSize(width: 50, height: 50)
         }
     }
-    
 }
