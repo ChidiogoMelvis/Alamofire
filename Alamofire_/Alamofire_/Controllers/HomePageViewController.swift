@@ -110,7 +110,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         setTitleColor()
         title = "Home"
         networking.fetchPodcasts()
-        //networking.fetchPlaylist()
+        
     }
     
     func setTitleColor() {

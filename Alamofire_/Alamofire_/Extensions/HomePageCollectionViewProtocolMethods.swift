@@ -15,11 +15,11 @@ extension HomePageViewController {
         case recentlyPlayedCollectionView:
             return tags.count
         case reviewsCollectionView:
-            return 8
+            return tags.count
         case topSongCollectionView:
-            return 5
+            return tags.count
         case editorsCollectionView:
-            return 9
+            return tags.count
         default:
             return 0
         }
