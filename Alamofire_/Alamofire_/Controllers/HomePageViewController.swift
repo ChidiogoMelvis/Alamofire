@@ -11,7 +11,7 @@ import Alamofire
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var networking = Networking()
+    var playlistViewModel = PlaylistViewModel()
     
     var tags: [Tag] = []
     
@@ -109,12 +109,31 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         setupViews()
         setTitleColor()
         title = "Home"
-        networking.fetchPodcasts()
-        //networking.fetchPlaylist()
+        fetchPlaylist()
+        //networking.fetchPodcasts()
     }
     
     func setTitleColor() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+    func fetchPlaylist() {
+        playlistViewModel.fetchPlaylist { [weak self] error in
+                    if let error = error {
+                        print("Error fetching playlist: \(error)")
+                    } else {
+                        if let playlist = self?.playlistViewModel.playlist {
+                            self?.tags = playlist.toptags.tag
+                        }
+                    
+                DispatchQueue.main.async {
+                    self?.recentlyPlayedCollectionView.reloadData()
+                    self?.reviewsCollectionView.reloadData()
+                    self?.topSongCollectionView.reloadData()
+                    self?.editorsCollectionView.reloadData()
+                }
+            }
+        }
     }
     
 }

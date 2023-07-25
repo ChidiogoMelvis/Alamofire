@@ -35,14 +35,14 @@ class TopSongCollectionViewCell: UICollectionViewCell {
         self.addSubview(imageView)
         
         NSLayoutConstraint.activate([
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-        nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+        nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+        nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
 
         imageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-        imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-        imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-        imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+        imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+        imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
                 ])
             }
     func downloadImage(withURL url: URL) {

@@ -14,7 +14,7 @@ class Label: UILabel {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.text = label
         self.textColor = textColor
-        self.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        self.font = UIFont.systemFont(ofSize: 14, weight: .regular)
 }
 
 required init?(coder aDecoder: NSCoder) {
