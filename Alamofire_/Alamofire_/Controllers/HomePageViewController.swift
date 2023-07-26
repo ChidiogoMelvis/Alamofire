@@ -15,6 +15,8 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var albums: [Datum] = []
     
+    var audioPlayer: AVPlayer?
+    
     var notificationButton = Button(image: UIImage(named: "notification"),  label: "", btnColor: .clear)
     
     var orientationButton = Button(image: UIImage(named: "orientationLock"),  label: "", btnColor: .clear)
@@ -134,5 +136,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                     }
             }
     }
+
 }
 

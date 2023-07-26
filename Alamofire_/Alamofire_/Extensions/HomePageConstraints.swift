@@ -33,7 +33,7 @@ extension HomePageViewController {
                 containerView.topAnchor.constraint(equalTo: scrollContent.topAnchor),
                 containerView.leadingAnchor.constraint(equalTo: scrollContent.leadingAnchor),
                 containerView.trailingAnchor.constraint(equalTo: scrollContent.trailingAnchor),
-                containerView.bottomAnchor.constraint(equalTo: scrollContent.bottomAnchor),
+                containerView.bottomAnchor.constraint(equalTo: scrollContent.bottomAnchor, constant: -8),
                 containerView.leadingAnchor.constraint(equalTo: scrollFrame.leadingAnchor),
                 containerView.trailingAnchor.constraint(equalTo: scrollFrame.trailingAnchor),
                 containerView.heightAnchor.constraint(equalToConstant: view.frame.height),

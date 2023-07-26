@@ -33,23 +33,23 @@ extension HomePageViewController {
         switch collectionView {
         case recentlyPlayedCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
-            let tag = albums[indexPath.item]
-                cell.configure(with: tag)
+            let album = albums[indexPath.item]
+                cell.configure(with: album)
             return cell
         case reviewsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as! ReviewsCollectionViewCell
-            let tag = albums[indexPath.item]
-                cell.configure(with: tag)
+            let album = albums[indexPath.item]
+                cell.configure(with: album)
             return cell
         case topSongCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopSongCollectionViewCell", for: indexPath) as! TopSongCollectionViewCell
-            let tag = albums[indexPath.item]
-                cell.configure(with: tag)
+            let album = albums[indexPath.item]
+                cell.configure(with: album)
             return cell
         case editorsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorsCollectionViewCell
-            let tag = albums[indexPath.item]
-                cell.configure(with: tag)
+            let album = albums[indexPath.item]
+                cell.configure(with: album)
             return cell
         default:
             return UICollectionViewCell()
