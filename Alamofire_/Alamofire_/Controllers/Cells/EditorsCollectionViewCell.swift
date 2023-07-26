@@ -44,7 +44,7 @@ class EditorsCollectionViewCell: UICollectionViewCell {
             nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
             nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-            //nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
+            nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
             
                 ])
             }
