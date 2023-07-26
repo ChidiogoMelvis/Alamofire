@@ -17,7 +17,7 @@ class Label: UILabel {
         self.textColor = textColor
         self.textAlignment = .center
         self.lineBreakMode = .byWordWrapping
-        self.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        self.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
 }
 
 required init?(coder aDecoder: NSCoder) {
