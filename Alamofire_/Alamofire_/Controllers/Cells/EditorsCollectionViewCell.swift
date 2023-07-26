@@ -9,9 +9,12 @@ import UIKit
 import Alamofire
 
 class EditorsCollectionViewCell: UICollectionViewCell {
+    
     let identifier = "EditorCollectionViewCell"
     
     let nameLabel = Label(label: "", textColor: .black)
+    
+    //let delegate: CollectionViewDelegate!
     
     let imageView: UIImageView = {
             let imageView = UIImageView()
@@ -23,14 +26,9 @@ class EditorsCollectionViewCell: UICollectionViewCell {
         }()
     
     override init(frame: CGRect) {
-            super.init(frame: frame)
-            setupViews()
-        }
-
-        required init?(coder: NSCoder) {
-            super.init(coder: coder)
-            setupViews()
-        }
+        super.init(frame: frame)
+        setupViews()
+    }
     
     func setupViews() {
         self.addSubview(nameLabel)
@@ -78,4 +76,9 @@ class EditorsCollectionViewCell: UICollectionViewCell {
                 }
             }
         }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

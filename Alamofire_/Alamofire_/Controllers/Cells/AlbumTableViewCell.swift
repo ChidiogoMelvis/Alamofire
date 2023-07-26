@@ -39,9 +39,5 @@ class AlbumTableViewCell: UITableViewCell {
             menuButtonCell.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14)
         ])
     }
-    
-//    func configureButton(withImage image: UIImage) {
-//            menuButtonCell.setImage(image, for: .normal)
-//        }
 
 }

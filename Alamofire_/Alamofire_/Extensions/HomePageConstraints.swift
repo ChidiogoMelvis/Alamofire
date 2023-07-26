@@ -10,7 +10,7 @@ import UIKit
 
 extension HomePageViewController {
         func setupViews() {
-            view.addSubview(stackView)
+            //view.addSubview(stackView)
             view.addSubview(scrollView)
             scrollView.addSubview(containerView)
             containerView.addSubview(recentlyPlayedCollectionView)
@@ -21,10 +21,10 @@ extension HomePageViewController {
             let scrollFrame = scrollView.frameLayoutGuide
             
             NSLayoutConstraint.activate([
-                stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
-                stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
+//                stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+//                stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
                 
-                scrollView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 50),
+                scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
                 scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                 scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
                 scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -61,7 +61,7 @@ extension HomePageViewController {
                 editorsCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 editorsCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
                 editorsCollectionView.heightAnchor.constraint(equalToConstant: 120),
-                editorsCollectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8)
+                //editorsCollectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8)
             ])
         }
 
