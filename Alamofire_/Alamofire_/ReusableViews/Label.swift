@@ -12,6 +12,7 @@ class Label: UILabel {
     init(label: String, textColor: UIColor) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.numberOfLines = 0
         self.text = label
         self.textColor = textColor
         self.font = UIFont.systemFont(ofSize: 14, weight: .regular)

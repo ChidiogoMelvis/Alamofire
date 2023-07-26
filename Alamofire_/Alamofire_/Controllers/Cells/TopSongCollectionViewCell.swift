@@ -16,7 +16,9 @@ class TopSongCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
             let imageView = UIImageView()
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.contentMode = .scaleAspectFit
+            //imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
             return imageView
         }()
     
@@ -35,35 +37,42 @@ class TopSongCollectionViewCell: UICollectionViewCell {
         self.addSubview(imageView)
         
         NSLayoutConstraint.activate([
-        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-        nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-        nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-
         imageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
         imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
         imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
+        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
+        
+        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+        nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+        nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
                 ])
             }
-    func downloadImage(withURL url: URL) {
-           AF.request(url).responseData { response in
-               switch response.result {
-               case .success(let data):
-                   if let image = UIImage(data: data) {
-                       DispatchQueue.main.async {
-                           self.imageView.image = image
-                       }
-                   }
-               case .failure(_):
-                   break
+    
+    
+    func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+               if let error = error {
+                   print("Error downloading image: \(error)")
+                   completion(nil)
+                   return
                }
-           }
+
+               if let data = data, let image = UIImage(data: data) {
+                   completion(image)
+               } else {
+                   completion(nil)
+               }
+           }.resume()
        }
 
-       func configure(with tag: Tag) {
-           nameLabel.text = tag.name
-           if let imageUrl = URL(string: tag.url) {
-               downloadImage(withURL: imageUrl)
-           }
-       }
+    func configure(with album: Datum) {
+        nameLabel.text = album.title
+            if let imageUrl = URL(string: album.cover) {
+                downloadImage(from: imageUrl) { [weak self] image in
+                    DispatchQueue.main.async {
+                        self?.imageView.image = image
+                    }
+                }
+            }
+        }
 }

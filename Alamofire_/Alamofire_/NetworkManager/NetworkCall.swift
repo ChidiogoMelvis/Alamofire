@@ -29,11 +29,29 @@ class Networking  {
             }
     }
     
-    func fetchPlaylist(completion: @escaping (Result<Playlist, Error>) -> Void) {
-            let apiKey = "3dba9713a1db6c1dc99dccc2bd9942a4"
-            let url = "https://ws.audioscrobbler.com/2.0/?method=album.gettoptags&artist=radiohead&album=the%20bends&api_key=\(apiKey)&format=json"
+//    func fetchPlaylist(completion: @escaping (Result<Playlist, Error>) -> Void) {
+////let apiKey = "3dba9713a1db6c1dc99dccc2bd9942a4"
+//            let url = "https://api.deezer.com/1.0/search/album?q=Thriller"
+//
+//            AF.request(url).responseDecodable(of: Playlist.self) { response in
+//                switch response.result {
+//                case .success(let data):
+//                    completion(.success(data))
+//                case .failure(let error):
+//                    completion(.failure(error))
+//                }
+//            }
+//        }
+    
+    //import Foundation
+//import Alamofire
+
+   // class DeezerNetworking {
+    func searchAlbum(query: String, completion: @escaping (Result<Playlist, Error>) -> Void) {
+            let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            let urlString = "https://api.deezer.com/1.0/search/album?q=\(encodedQuery)"
             
-            AF.request(url).responseDecodable(of: Playlist.self) { response in
+            AF.request(urlString).responseDecodable(of: Playlist.self) { response in
                 switch response.result {
                 case .success(let data):
                     completion(.success(data))
@@ -43,5 +61,7 @@ class Networking  {
             }
         }
     }
+
+    //}
 
  

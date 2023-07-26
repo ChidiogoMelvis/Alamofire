@@ -16,7 +16,9 @@ class EditorsCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
             let imageView = UIImageView()
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.contentMode = .scaleAspectFit
+            //imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
             return imageView
         }()
     
@@ -45,25 +47,32 @@ class EditorsCollectionViewCell: UICollectionViewCell {
         imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
                 ])
             }
-    func downloadImage(withURL url: URL) {
-           AF.request(url).responseData { response in
-               switch response.result {
-               case .success(let data):
-                   if let image = UIImage(data: data) {
-                       DispatchQueue.main.async {
-                           self.imageView.image = image
-                       }
-                   }
-               case .failure(_):
-                   break
+    
+    
+    func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+               if let error = error {
+                   print("Error downloading image: \(error)")
+                   completion(nil)
+                   return
                }
-           }
+
+               if let data = data, let image = UIImage(data: data) {
+                   completion(image)
+               } else {
+                   completion(nil)
+               }
+           }.resume()
        }
 
-       func configure(with tag: Tag) {
-           nameLabel.text = tag.name
-           if let imageUrl = URL(string: tag.url) {
-               downloadImage(withURL: imageUrl)
-           }
-       }
+    func configure(with album: Datum) {
+        nameLabel.text = album.title
+            if let imageUrl = URL(string: album.cover) {
+                downloadImage(from: imageUrl) { [weak self] image in
+                    DispatchQueue.main.async {
+                        self?.imageView.image = image
+                    }
+                }
+            }
+        }
 }

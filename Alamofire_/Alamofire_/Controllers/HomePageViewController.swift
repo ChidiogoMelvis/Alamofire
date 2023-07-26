@@ -13,7 +13,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var playlistViewModel = PlaylistViewModel()
     
-    var tags: [Tag] = []
+    var albums: [Datum] = []
     
     var notificationButton = Button(image: UIImage(named: "notification"),  label: "", btnColor: .clear)
     
@@ -109,32 +109,44 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         setupViews()
         setTitleColor()
         title = "Home"
-        fetchPlaylist()
+        //fetchPlaylist()
         //networking.fetchPodcasts()
+        playlistViewModel.searchAlbum(query: "Thriller") { [weak self] result in
+                    switch result {
+                    case .success(let playlist):
+                        self?.albums = playlist.data
+                        DispatchQueue.main.async {
+                            self?.recentlyPlayedCollectionView.reloadData()
+                            self?.reviewsCollectionView.reloadData()
+                            self?.topSongCollectionView.reloadData()
+                            self?.editorsCollectionView.reloadData()
+                        }
+                    case .failure(let error):
+                        print("Error fetching albums: \(error)")
+                    }
+                }
     }
     
     func setTitleColor() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
-    func fetchPlaylist() {
-        playlistViewModel.fetchPlaylist { [weak self] error in
-                    if let error = error {
-                        print("Error fetching playlist: \(error)")
-                    } else {
-                        if let playlist = self?.playlistViewModel.playlist {
-                            self?.tags = playlist.toptags.tag
-                        }
-                    
-                DispatchQueue.main.async {
-                    self?.recentlyPlayedCollectionView.reloadData()
-                    self?.reviewsCollectionView.reloadData()
-                    self?.topSongCollectionView.reloadData()
-                    self?.editorsCollectionView.reloadData()
-                }
-            }
-        }
-    }
+//    func fetchPlaylist() {
+//        playlistViewModel.searchAlbum(query: "Thriller") { [weak self] result in
+//            switch result {
+//            case .success(let playlist):
+//                // Update the albums array with the fetched data
+//                self?.albums = playlist.data
+//                // Reload the collection view to display the fetched albums
+//                DispatchQueue.main.async {
+//                    self?.collectionView.reloadData()
+//                }
+//            case .failure(let error):
+//                print("Error fetching albums: \(error)")
+//            }
+//        }
+//
+//    }
     
 }
 
