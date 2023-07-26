@@ -15,10 +15,10 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
     
     let imageView: UIImageView = {
             let imageView = UIImageView()
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            //imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 10
             return imageView
         }()
     
@@ -37,14 +37,15 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
         self.addSubview(imageView)
         
         NSLayoutConstraint.activate([
-        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-        nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-        nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-
-        imageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-        imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-        imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
+            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
+            imageView.heightAnchor.constraint(equalToConstant: 70),
+            imageView.widthAnchor.constraint(equalToConstant: 100),
+            
+            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+            nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
                 ])
             }
     
