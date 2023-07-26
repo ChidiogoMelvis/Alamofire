@@ -29,24 +29,6 @@ class Networking  {
             }
     }
     
-//    func fetchPlaylist(completion: @escaping (Result<Playlist, Error>) -> Void) {
-////let apiKey = "3dba9713a1db6c1dc99dccc2bd9942a4"
-//            let url = "https://api.deezer.com/1.0/search/album?q=Thriller"
-//
-//            AF.request(url).responseDecodable(of: Playlist.self) { response in
-//                switch response.result {
-//                case .success(let data):
-//                    completion(.success(data))
-//                case .failure(let error):
-//                    completion(.failure(error))
-//                }
-//            }
-//        }
-    
-    //import Foundation
-//import Alamofire
-
-   // class DeezerNetworking {
     func searchAlbum(query: String, completion: @escaping (Result<Playlist, Error>) -> Void) {
             let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
             let urlString = "https://api.deezer.com/1.0/search/album?q=\(encodedQuery)"
@@ -62,6 +44,5 @@ class Networking  {
         }
     }
 
-    //}
 
  

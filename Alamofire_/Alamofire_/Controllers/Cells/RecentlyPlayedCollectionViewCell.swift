@@ -16,10 +16,9 @@ class RecentlyPlayedCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
             let imageView = UIImageView()
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            //imageView.contentMode = .scaleAspectFit
-                imageView.contentMode = .scaleAspectFill
-                imageView.clipsToBounds = true
-               imageView.layer.cornerRadius = 50
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.layer.cornerRadius = 47
             return imageView
         }()
     
@@ -42,7 +41,8 @@ class RecentlyPlayedCollectionViewCell: UICollectionViewCell {
         imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
         imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
         imageView.heightAnchor.constraint(equalToConstant: 100),
-        imageView.widthAnchor.constraint(equalToConstant: 100)
+        imageView.widthAnchor.constraint(equalToConstant: 100),
+        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -3)
         ])
             }
     

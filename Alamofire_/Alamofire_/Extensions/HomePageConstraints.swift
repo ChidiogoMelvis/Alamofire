@@ -48,19 +48,20 @@ extension HomePageViewController {
                 reviewsCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
                 reviewsCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 reviewsCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-                reviewsCollectionView.heightAnchor.constraint(equalToConstant: 110),
+                reviewsCollectionView.heightAnchor.constraint(equalToConstant: 120),
                 
                 topSongCollectionView.topAnchor.constraint(equalTo: reviewsCollectionView.bottomAnchor, constant: 50),
                 topSongCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
                 topSongCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 topSongCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-                topSongCollectionView.heightAnchor.constraint(equalToConstant: 110),
+                topSongCollectionView.heightAnchor.constraint(equalToConstant: 120),
                 
                 editorsCollectionView.topAnchor.constraint(equalTo: topSongCollectionView.bottomAnchor, constant: 50),
                 editorsCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
                 editorsCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
                 editorsCollectionView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-                editorsCollectionView.heightAnchor.constraint(equalToConstant: 110)
+                editorsCollectionView.heightAnchor.constraint(equalToConstant: 120),
+                editorsCollectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8)
             ])
         }
 

@@ -109,8 +109,16 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         setupViews()
         setTitleColor()
         title = "Home"
-        //fetchPlaylist()
+        fetchPlaylist()
         //networking.fetchPodcasts()
+        
+    }
+    
+    func setTitleColor() {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+
+    func fetchPlaylist() {
         playlistViewModel.searchAlbum(query: "Thriller") { [weak self] result in
                     switch result {
                     case .success(let playlist):
@@ -124,29 +132,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                     case .failure(let error):
                         print("Error fetching albums: \(error)")
                     }
-                }
+            }
     }
-    
-    func setTitleColor() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    }
-    
-//    func fetchPlaylist() {
-//        playlistViewModel.searchAlbum(query: "Thriller") { [weak self] result in
-//            switch result {
-//            case .success(let playlist):
-//                // Update the albums array with the fetched data
-//                self?.albums = playlist.data
-//                // Reload the collection view to display the fetched albums
-//                DispatchQueue.main.async {
-//                    self?.collectionView.reloadData()
-//                }
-//            case .failure(let error):
-//                print("Error fetching albums: \(error)")
-//            }
-//        }
-//
-//    }
-    
 }
 

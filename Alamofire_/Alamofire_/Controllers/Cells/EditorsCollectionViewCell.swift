@@ -11,7 +11,7 @@ import Alamofire
 class EditorsCollectionViewCell: UICollectionViewCell {
     let identifier = "EditorCollectionViewCell"
     
-    let nameLabel = Label(label: "", textColor: .brown)
+    let nameLabel = Label(label: "", textColor: .black)
     
     let imageView: UIImageView = {
             let imageView = UIImageView()
@@ -43,9 +43,10 @@ class EditorsCollectionViewCell: UICollectionViewCell {
             imageView.heightAnchor.constraint(equalToConstant: 70),
             imageView.widthAnchor.constraint(equalToConstant: 100),
             
-            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
             nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+            //nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
             
                 ])
             }
