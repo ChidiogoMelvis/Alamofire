@@ -88,6 +88,8 @@ extension HomePageViewController {
     func didSelectAlbum(_album: Datum) {
         let vc = EditorsTrackListViewController(tracks: albums)
         navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.navigationBar.tintColor = .black
+        
     }
     
 }

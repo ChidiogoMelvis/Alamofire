@@ -6,15 +6,17 @@
 //
 
 import UIKit
+import AVFoundation
 
-class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate {
+    
+    var audioPlayer: AVAudioPlayer?
     
     var tracks: [Datum]
-    //var selectedAlbumIndex: Int
     
     init(tracks: [Datum]) {
         self.tracks = tracks
-        //self.selectedAlbumIndex = selectedAlbumIndex
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,6 +36,7 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObjects()
+        audioPlayer?.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -59,8 +62,15 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectedSong = tracks[indexPath.row]
+//        playAudio(fileName: selectedSong.link)
+//    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 60
     }
+    
+
 
 }
