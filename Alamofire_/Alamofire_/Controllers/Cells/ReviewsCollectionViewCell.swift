@@ -13,7 +13,7 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
     
     let nameLabel = Label(label: "", textColor: .black)
     
-    let imageView: UIImageView = {
+    lazy var imageView: UIImageView = {
             let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill

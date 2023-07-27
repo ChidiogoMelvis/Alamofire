@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04018C972A5CDE0F002FF85F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04018C962A5CDE0F002FF85F /* AppCoordinator.swift */; };
+		040395912A71DCDD00D448FB /* EditorsTrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040395902A71DCDD00D448FB /* EditorsTrackListViewController.swift */; };
+		040395972A71FB6A00D448FB /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040395962A71FB6A00D448FB /* TrackTableViewCell.swift */; };
 		042B995C2A5A088B005E2FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B995B2A5A088B005E2FBC /* AppDelegate.swift */; };
 		042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B995D2A5A088B005E2FBC /* SceneDelegate.swift */; };
 		042B99602A5A088B005E2FBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B995F2A5A088B005E2FBC /* ViewController.swift */; };
@@ -69,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		04018C962A5CDE0F002FF85F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		040395902A71DCDD00D448FB /* EditorsTrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsTrackListViewController.swift; sourceTree = "<group>"; };
+		040395962A71FB6A00D448FB /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		042B99582A5A088B005E2FBC /* Alamofire_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alamofire_.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B995B2A5A088B005E2FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		042B995D2A5A088B005E2FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0403958F2A71DC8100D448FB /* TrackScreens */ = {
+			isa = PBXGroup;
+			children = (
+				040395902A71DCDD00D448FB /* EditorsTrackListViewController.swift */,
+				040395952A71FB5400D448FB /* Cells */,
+			);
+			path = TrackScreens;
+			sourceTree = "<group>";
+		};
+		040395952A71FB5400D448FB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				040395962A71FB6A00D448FB /* TrackTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		042B994F2A5A088B005E2FBC = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +236,7 @@
 				042B995F2A5A088B005E2FBC /* ViewController.swift */,
 				042B999E2A5CD18E005E2FBC /* TabBarViewController.swift */,
 				042B998B2A5A097E005E2FBC /* HomePageViewController.swift */,
+				0403958F2A71DC8100D448FB /* TrackScreens */,
 				042B99A22A5CD203005E2FBC /* LibraryPageViewController.swift */,
 				0438B3982A6172A3000C3701 /* SearchPages */,
 				042B99982A5BCE84005E2FBC /* Cells */,
@@ -489,6 +511,7 @@
 				04718B232A5E6B4600A636FB /* SearchPageConstraint.swift in Sources */,
 				04018C972A5CDE0F002FF85F /* AppCoordinator.swift in Sources */,
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,
+				040395972A71FB6A00D448FB /* TrackTableViewCell.swift in Sources */,
 				04718B212A5E210B00A636FB /* ReviewsCollectionViewCell.swift in Sources */,
 				04A5DF622A5D7E960011F70C /* EditorsCollectionViewCell.swift in Sources */,
 				04DF09442A638F810023D035 /* AlbumviewViewcontrollerConstraint.swift in Sources */,
@@ -511,6 +534,7 @@
 				046586472A6A06CC0056678A /* CustomView.swift in Sources */,
 				042B99932A5A0A92005E2FBC /* NetworkCall.swift in Sources */,
 				04DF09392A6183170023D035 /* TrackViewController.swift in Sources */,
+				040395912A71DCDD00D448FB /* EditorsTrackListViewController.swift in Sources */,
 				04DF09372A6182F60023D035 /* EllipsisViewController.swift in Sources */,
 				04A5DF582A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift in Sources */,
 				04718B252A5E6C2300A636FB /* Label.swift in Sources */,

@@ -34,23 +34,25 @@ extension HomePageViewController {
         case recentlyPlayedCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentlyPlayedCollectionViewCell", for: indexPath) as! RecentlyPlayedCollectionViewCell
             let album = albums[indexPath.item]
-                cell.configure(with: album)
+            cell.configure(with: album)
+            
             return cell
         case reviewsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as! ReviewsCollectionViewCell
             let album = albums[indexPath.item]
-                cell.configure(with: album)
+            cell.configure(with: album)
             return cell
         case topSongCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopSongCollectionViewCell", for: indexPath) as! TopSongCollectionViewCell
             let album = albums[indexPath.item]
-                cell.configure(with: album)
+            cell.configure(with: album)
             return cell
         case editorsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorsCollectionViewCell
-            let album = albums[indexPath.item]
-                cell.configure(with: album)
-            return cell
+                        let album = albums[indexPath.item]
+                        cell.configure(with: album)
+                       //cell.delegate = self
+                        return cell
         default:
             return UICollectionViewCell()
         }
@@ -69,6 +71,25 @@ extension HomePageViewController {
         default:
             return CGSize(width: 50, height: 50)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case reviewsCollectionView:
+            break
+        case topSongCollectionView:
+            break
+        case editorsCollectionView:
+            let data = albums[indexPath.item]
+            let vc = EditorsTrackListViewController()
+           // vc.tracks = [data.title]
+            vc.tracks = [data]
+            navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.navigationBar.tintColor = .black
+        default:
+            break
+        }
+        
     }
     
 }

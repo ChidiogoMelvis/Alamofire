@@ -16,6 +16,14 @@ protocol AlbumTableViewButtonsDelegate{
     func presentView(cell: AlbumTableViewCell)
 }
 
-protocol CollectionViewDelegate{
-    func didSelectAlbum(atIndex index: Int)
+protocol ReviewsCollectionViewDelegate{
+    func didSelectAlbum(album: Datum)
+}
+
+protocol TopSongCollectionViewDelegate{
+    func didSelectAlbum(album: Datum)
+}
+
+protocol EditorsCollectionViewDelegate{
+    func didSelectAlbum(_ cell: EditorsCollectionViewCell)
 }

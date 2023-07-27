@@ -17,26 +17,10 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var audioPlayer: AVPlayer?
     
-//    var notificationButton = Button(image: UIImage(named: "notification"),  label: "", btnColor: .clear)
-//
-//    var orientationButton = Button(image: UIImage(named: "orientationLock"),  label: "", btnColor: .clear)
-//
-//    var settingsButton = Button(image: UIImage(named: "Settings"),  label: "", btnColor: .clear)
-    
-//    lazy var stackView: UIStackView = {
-//        let stack = UIStackView(arrangedSubviews: [notificationButton, orientationButton, settingsButton])
-//        stack.translatesAutoresizingMaskIntoConstraints = false
-//        stack.spacing = 20
-//        stack.axis = .horizontal
-//        stack.distribution = .equalSpacing
-//        return stack
-//    }()
-    
-    
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return scrollView
     }()
     
