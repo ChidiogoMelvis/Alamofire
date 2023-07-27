@@ -15,12 +15,13 @@ class TrackTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupViews()
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        setupViews()
         // Configure the view for the selected state
     }
     
@@ -31,13 +32,13 @@ class TrackTableViewCell: UITableViewCell {
     
                 nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
                 nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-                nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+                //nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
                 nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
             ])
         }
     
-    func configure(album: Datum) {
-        nameLabel.text = album.title
-    }
+//    func configure(album: Datum) {
+//        nameLabel.text = album.title
+//    }
 
 }

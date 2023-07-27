@@ -9,8 +9,8 @@ import UIKit
 import AVFoundation
 import Alamofire
 
-class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, EditorsCollectionViewDelegate {
+   
     var playlistViewModel = PlaylistViewModel()
     
     var albums: [Datum] = []

@@ -9,7 +9,18 @@ import UIKit
 
 class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tracks: [Datum] = []
+    var tracks: [Datum]
+    //var selectedAlbumIndex: Int
+    
+    init(tracks: [Datum]) {
+        self.tracks = tracks
+        //self.selectedAlbumIndex = selectedAlbumIndex
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     lazy var trackTableView: UITableView = {
         let tableView = UITableView()
@@ -44,13 +55,12 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrackTableViewCell", for: indexPath) as! TrackTableViewCell
-        let track = tracks[indexPath.row]
-        cell.configure(album: track)
+        cell.nameLabel.text = tracks[indexPath.item].title
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
 
 }

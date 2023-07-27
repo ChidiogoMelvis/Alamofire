@@ -17,13 +17,13 @@ protocol AlbumTableViewButtonsDelegate{
 }
 
 protocol ReviewsCollectionViewDelegate{
-    func didSelectAlbum(album: Datum)
+    func didSelectAlbum(_album: Datum)
 }
 
 protocol TopSongCollectionViewDelegate{
-    func didSelectAlbum(album: Datum)
+    func didSelectAlbum(_album: Datum)
 }
 
 protocol EditorsCollectionViewDelegate{
-    func didSelectAlbum(_ cell: EditorsCollectionViewCell)
+    func didSelectAlbum(_album: Datum)
 }

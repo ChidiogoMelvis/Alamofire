@@ -51,7 +51,7 @@ extension HomePageViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorsCollectionViewCell
                         let album = albums[indexPath.item]
                         cell.configure(with: album)
-                       //cell.delegate = self
+                       cell.delegate = self
                         return cell
         default:
             return UICollectionViewCell()
@@ -74,22 +74,20 @@ extension HomePageViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch collectionView {
-        case reviewsCollectionView:
-            break
-        case topSongCollectionView:
-            break
-        case editorsCollectionView:
-            let data = albums[indexPath.item]
-            let vc = EditorsTrackListViewController()
-           // vc.tracks = [data.title]
-            vc.tracks = [data]
-            navigationController?.pushViewController(vc, animated: true)
-            self.navigationController?.navigationBar.tintColor = .black
-        default:
-            break
+        if collectionView == reviewsCollectionView{
+            
+        }else if collectionView == topSongCollectionView {
+            
+        }else if collectionView == editorsCollectionView {
+            let selectedAlbum = albums[indexPath.item]
+            didSelectAlbum(_album: selectedAlbum)
         }
         
+    }
+    
+    func didSelectAlbum(_album: Datum) {
+        let vc = EditorsTrackListViewController(tracks: albums)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
