@@ -120,6 +120,6 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
                     }
             }
     }
-
+    
 }
 

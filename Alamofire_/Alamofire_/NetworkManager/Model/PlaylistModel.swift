@@ -113,3 +113,5 @@ enum ArtistName: String, Codable {
     case skaut = "Skaut"
     case triFace = "TriFace"
 }
+
+

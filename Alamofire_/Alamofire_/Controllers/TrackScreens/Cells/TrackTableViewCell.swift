@@ -16,6 +16,8 @@ class TrackTableViewCell: UITableViewCell {
     
     var track: Datum!
     
+    var audioIsPlaying = false
+    
     let nameLabel = Label(label: "", textColor: .black)
     
     let playButton = Button(image: UIImage(systemName: "play.fill"), label: "", btnColor: .black)
@@ -55,7 +57,23 @@ class TrackTableViewCell: UITableViewCell {
         } else {
             print("Error: Invalid audio URL.")
         }
+        if audioIsPlaying {
+            pauseAudio()
+            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        } else {
+            playAudio()
+            playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        }
     }
-
-
+    
+    func playAudio() {
+        audioIsPlaying = true
+    }
+    
+    func pauseAudio() {
+        audioIsPlaying = false
+    }
+    
 }
+
+
