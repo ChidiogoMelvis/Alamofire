@@ -64,6 +64,7 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
         cell.nameLabel.text = track.name
         cell.track = track
         cell.delegate = self
+        cell.playButton.tintColor = .gray
         return cell
     }
     
