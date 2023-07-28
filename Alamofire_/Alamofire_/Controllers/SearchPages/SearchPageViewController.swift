@@ -7,7 +7,9 @@
 
 import UIKit
 
-class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+    
+    var podcast: [Podcast] = []
     
     let searchLabel = Label(label: "Search", textColor: .white)
     
@@ -17,6 +19,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
         let search = UISearchBar()
         search.translatesAutoresizingMaskIntoConstraints = false
         search.placeholder = "Your favorites podcasts"
+        search.delegate = self
         return search
 }()
 
@@ -38,6 +41,15 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        <#code#>
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
     }
     
 }
