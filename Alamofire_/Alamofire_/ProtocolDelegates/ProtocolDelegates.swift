@@ -27,3 +27,8 @@ protocol TopSongCollectionViewDelegate{
 protocol EditorsCollectionViewDelegate{
     func didSelectAlbum(_album: Datum)
 }
+
+protocol PlayAlbumDelegate {
+   func playTrack(urlString: String)
+}
+

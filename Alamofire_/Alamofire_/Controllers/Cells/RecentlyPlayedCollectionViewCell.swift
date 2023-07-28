@@ -63,7 +63,7 @@ class RecentlyPlayedCollectionViewCell: UICollectionViewCell {
        }
 
     func configure(with album: Datum) {
-        if let imageUrl = URL(string: album.cover) {
+        if let imageUrl = URL(string: album.image) {
                 downloadImage(from: imageUrl) { [weak self] image in
                     DispatchQueue.main.async {
                         self?.imageView.image = image

@@ -6,39 +6,56 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TrackTableViewCell: UITableViewCell {
     
     let identifier = "TrackTableViewCell"
     
+    var delegate: PlayAlbumDelegate?
+    
+    var track: Datum!
+    
     let nameLabel = Label(label: "", textColor: .black)
-
+    
+    let playButton = Button(image: UIImage(systemName: "play.fill"), label: "", btnColor: .black)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
-        // Configure the view for the selected state
+        playButton.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
     }
     
     func setupViews() {
-            self.addSubview(nameLabel)
+        self.addSubview(nameLabel)
+        self.addSubview(playButton)
+        
+        NSLayoutConstraint.activate([
             
-            NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
+            
+            playButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
+            playButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
+            playButton.widthAnchor.constraint(equalToConstant: 40),
+            playButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
     
-                nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-                nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-                //nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-                nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8)
-            ])
+    @objc func btnTapped() {
+        if let audioURLString = track.audio {
+            delegate?.playTrack(urlString: audioURLString)
+        } else {
+            print("Error: Invalid audio URL.")
         }
-    
-//    func configure(album: Datum) {
-//        nameLabel.text = album.title
-//    }
+    }
+
 
 }

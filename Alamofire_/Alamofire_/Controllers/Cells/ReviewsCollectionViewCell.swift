@@ -66,8 +66,8 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
        }
 
     func configure(with album: Datum) {
-        nameLabel.text = album.title
-            if let imageUrl = URL(string: album.cover) {
+        nameLabel.text = album.name
+        if let imageUrl = URL(string: album.image) {
                 downloadImage(from: imageUrl) { [weak self] image in
                     DispatchQueue.main.async {
                         self?.imageView.image = image

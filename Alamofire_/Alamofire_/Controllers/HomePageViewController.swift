@@ -108,7 +108,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         playlistViewModel.searchAlbum(query: "Thriller") { [weak self] result in
                     switch result {
                     case .success(let playlist):
-                        self?.albums = playlist.data
+                        self?.albums = playlist.results
                         DispatchQueue.main.async {
                             self?.recentlyPlayedCollectionView.reloadData()
                             self?.reviewsCollectionView.reloadData()

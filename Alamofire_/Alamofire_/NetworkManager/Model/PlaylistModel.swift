@@ -8,104 +8,108 @@ import Foundation
 
 // MARK: - Welcome
 class Playlist: Codable {
-    let data: [Datum]
-    let total: Int
-    let next: String
+    let headers: Headers
+    let results: [Datum]
 
-    init(data: [Datum], total: Int, next: String) {
-        self.data = data
-        self.total = total
+    init(headers: Headers, results: [Datum]) {
+        self.headers = headers
+        self.results = results
+    }
+}
+
+// MARK: - Headers
+class Headers: Codable {
+    let status: String
+    let code: Int
+    let errorMessage, warnings: String?
+    let resultsCount: Int?
+    let next: String?
+
+    enum CodingKeys: String, CodingKey {
+        case status, code
+        case errorMessage
+        case warnings
+        case resultsCount
+        case next
+    }
+
+    init(status: String, code: Int, errorMessage: String, warnings: String, resultsCount: Int, next: String) {
+        self.status = status
+        self.code = code
+        self.errorMessage = errorMessage
+        self.warnings = warnings
+        self.resultsCount = resultsCount
         self.next = next
     }
 }
 
-// MARK: - Datum
+// MARK: - Result
 class Datum: Codable {
-    let id: Int
-    let title: String
-    let link, cover: String
-    let coverSmall, coverMedium, coverBig, coverXl: String?
-    let md5Image: String?
-    let genreID, nbTracks: Int?
-    let recordType: RecordTypeEnum?
-    let tracklist: String
-    let explicitLyrics: Bool?
-    let artist: Artist
-    let type: RecordTypeEnum
+    let id, name: String
+    let duration: Int
+    let artistID: String?
+    let artistName: ArtistName?
+    let artistIdstr: ArtistIdstr?
+    let albumName: AlbumName?
+    let albumID, licenseCcurl: String?
+    let position: Int
+    let releasedate: String
+    let albumImage, audio, audiodownload: String?
+    let prourl: String
+    let shorturl, shareurl: String
+    let audiodownloadAllowed: Bool?
+    let image: String
 
     enum CodingKeys: String, CodingKey {
-        case id, title, link, cover
-        case coverSmall
-        case coverMedium
-        case coverBig
-        case coverXl
-        case md5Image
-        case genreID
-        case nbTracks
-        case recordType
-        case tracklist
-        case explicitLyrics
-        case artist, type
+        case id, name, duration
+        case artistID
+        case artistName
+        case artistIdstr
+        case albumName
+        case albumID
+        case licenseCcurl
+        case position, releasedate
+        case albumImage
+        case audio, audiodownload, prourl, shorturl, shareurl
+        case audiodownloadAllowed
+        case image
     }
 
-    init(id: Int, title: String, link: String, cover: String, coverSmall: String, coverMedium: String, coverBig: String, coverXl: String, md5Image: String, genreID: Int, nbTracks: Int, recordType: RecordTypeEnum, tracklist: String, explicitLyrics: Bool, artist: Artist, type: RecordTypeEnum) {
-        self.id = id
-        self.title = title
-        self.link = link
-        self.cover = cover
-        self.coverSmall = coverSmall
-        self.coverMedium = coverMedium
-        self.coverBig = coverBig
-        self.coverXl = coverXl
-        self.md5Image = md5Image
-        self.genreID = genreID
-        self.nbTracks = nbTracks
-        self.recordType = recordType
-        self.tracklist = tracklist
-        self.explicitLyrics = explicitLyrics
-        self.artist = artist
-        self.type = type
-    }
-}
-
-// MARK: - Artist
-class Artist: Codable {
-    let id: Int
-    let name: String
-    let link, picture: String
-    let pictureSmall, pictureMedium, pictureBig, pictureXl: String?
-    let tracklist: String
-    let type: ArtistType
-
-    enum CodingKeys: String, CodingKey {
-        case id, name, link, picture
-        case pictureSmall
-        case pictureMedium
-        case pictureBig
-        case pictureXl
-        case tracklist, type
-    }
-
-    init(id: Int, name: String, link: String, picture: String, pictureSmall: String, pictureMedium: String, pictureBig: String, pictureXl: String, tracklist: String, type: ArtistType) {
+    init(id: String, name: String, duration: Int, artistID: String, artistName: ArtistName, artistIdstr: ArtistIdstr, albumName: AlbumName, albumID: String, licenseCcurl: String, position: Int, releasedate: String, albumImage: String, audio: String, audiodownload: String, prourl: String, shorturl: String, shareurl: String, audiodownloadAllowed: Bool, image: String) {
         self.id = id
         self.name = name
-        self.link = link
-        self.picture = picture
-        self.pictureSmall = pictureSmall
-        self.pictureMedium = pictureMedium
-        self.pictureBig = pictureBig
-        self.pictureXl = pictureXl
-        self.tracklist = tracklist
-        self.type = type
+        self.duration = duration
+        self.artistID = artistID
+        self.artistName = artistName
+        self.artistIdstr = artistIdstr
+        self.albumName = albumName
+        self.albumID = albumID
+        self.licenseCcurl = licenseCcurl
+        self.position = position
+        self.releasedate = releasedate
+        self.albumImage = albumImage
+        self.audio = audio
+        self.audiodownload = audiodownload
+        self.prourl = prourl
+        self.shorturl = shorturl
+        self.shareurl = shareurl
+        self.audiodownloadAllowed = audiodownloadAllowed
+        self.image = image
     }
 }
 
-enum ArtistType: String, Codable {
-    case artist = "artist"
+enum AlbumName: String, Codable {
+    case mindAsylum = "Mind Asylum"
+    case premiersJets = "Premiers Jets"
+    case the3SaucissesDansUneBulle = "3 Saucisses Dans Une Bulle"
 }
 
-enum RecordTypeEnum: String, Codable {
-    case album = "album"
-    case ep = "ep"
-    case single = "single"
+enum ArtistIdstr: String, Codable {
+    case skaut = "skaut"
+    case triface = "triface"
+}
+
+enum ArtistName: String, Codable {
+    case skaut = "Skaut"
+    case triFace = "TriFace"
 }

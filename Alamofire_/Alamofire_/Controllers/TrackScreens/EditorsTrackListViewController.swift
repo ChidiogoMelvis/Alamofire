@@ -8,11 +8,14 @@
 import UIKit
 import AVFoundation
 
-class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate {
-    
-    var audioPlayer: AVAudioPlayer?
+class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PlayAlbumDelegate  {
+
+    var player:AVPlayer?
+    var playerItem:AVPlayerItem?
     
     var tracks: [Datum]
+    
+    var selectedCellIndexPath: IndexPath?
     
     init(tracks: [Datum]) {
         self.tracks = tracks
@@ -36,7 +39,6 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObjects()
-        audioPlayer?.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -51,26 +53,32 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
             trackTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
         ])
     }
-        
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrackTableViewCell", for: indexPath) as! TrackTableViewCell
-        cell.nameLabel.text = tracks[indexPath.item].title
+        let track = tracks[indexPath.row]
+        cell.nameLabel.text = track.name
+        cell.track = track
+        cell.delegate = self
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedSong = tracks[indexPath.row]
-//        playAudio(fileName: selectedSong.link)
-//    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
     
-
+    func playTrack(urlString: String) {
+        if let url = URL(string: urlString) {
+            playerItem = AVPlayerItem(url: url)
+            player = AVPlayer(playerItem: playerItem)
+            player?.play()
+        } else {
+            print("Error: Invalid audio URL.")
+        }
+    }
 
 }

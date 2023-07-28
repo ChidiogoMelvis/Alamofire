@@ -28,20 +28,21 @@ class Networking  {
                     }
             }
     }
-    
+
     func searchAlbum(query: String, completion: @escaping (Result<Playlist, Error>) -> Void) {
-            let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-            let urlString = "https://api.deezer.com/1.0/search/album?q=\(encodedQuery)"
-            
-            AF.request(urlString).responseDecodable(of: Playlist.self) { response in
-                switch response.result {
-                case .success(let data):
-                    completion(.success(data))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
+        let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let urlString = "https://api.jamendo.com/v3.0/tracks/?client_id=132a4b14"
+
+        AF.request(urlString).responseDecodable(of: Playlist.self) { response in
+            switch response.result {
+            case .success(let playlist):
+                completion(.success(playlist))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
+    }
+
     }
 
 
