@@ -9,7 +9,11 @@ import UIKit
 
 class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
-    var podcast: [Podcast] = []
+    var podcasts = [Podcast] ()
+    
+    var filteredPodcasts = [Podcast]()
+    
+    var networking = Networking()
     
     let searchLabel = Label(label: "Search", textColor: .white)
     
@@ -41,6 +45,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        networking.fetchPodcasts()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

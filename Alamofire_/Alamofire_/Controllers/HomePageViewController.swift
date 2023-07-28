@@ -95,7 +95,7 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
         setupViews()
         setTitleColor()
         title = "Home"
-        fetchPlaylist()
+        //fetchPlaylist()
         //networking.fetchPodcasts()
         
     }
