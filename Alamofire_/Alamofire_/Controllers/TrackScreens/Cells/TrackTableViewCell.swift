@@ -12,9 +12,9 @@ class TrackTableViewCell: UITableViewCell {
     
     let identifier = "TrackTableViewCell"
     
-    var delegate: PlayAlbumDelegate?
-    
     var track: Datum!
+    
+    var player: AVPlayer?
     
     var audioIsPlaying = false
     
@@ -52,27 +52,38 @@ class TrackTableViewCell: UITableViewCell {
     }
     
     @objc func btnTapped() {
-        if let audioURLString = track.audio {
-            delegate?.playTrack(urlString: audioURLString)
-        } else {
-            print("Error: Invalid audio URL.")
-        }
-        if audioIsPlaying {
-            pauseAudio()
-            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-        } else {
-            playAudio()
-            playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-        }
-    }
-    
-    func playAudio() {
-        audioIsPlaying = true
-    }
+           if let audioURLString = track.audio {
+               if audioIsPlaying {
+                   pauseAudio()
+                   showPlayButton()
+               } else {
+                   playAudio(audioURLString)
+                   showPauseButton()
+               }
+               audioIsPlaying.toggle()
+           } else {
+               print("error")
+           }
+       }
+
+       func playAudio(_ urlString: String) {
+           if let audioURL = URL(string: urlString) {
+               player = AVPlayer(url: audioURL)
+               player?.play()
+           }
+       }
     
     func pauseAudio() {
-        audioIsPlaying = false
-    }
+            player?.pause()
+        }
+
+    func showPlayButton() {
+            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        }
+
+        func showPauseButton() {
+            playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        }
     
 }
 

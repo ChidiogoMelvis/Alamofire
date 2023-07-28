@@ -8,10 +8,7 @@
 import UIKit
 import AVFoundation
 
-class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PlayAlbumDelegate  {
-
-    var player:AVPlayer?
-    var playerItem:AVPlayerItem?
+class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     var tracks: [Datum]
     
@@ -19,7 +16,6 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     
     init(tracks: [Datum]) {
         self.tracks = tracks
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -63,8 +59,12 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
         let track = tracks[indexPath.row]
         cell.nameLabel.text = track.name
         cell.track = track
-        cell.delegate = self
         cell.playButton.tintColor = .gray
+        if cell.audioIsPlaying {
+            cell.showPauseButton()
+        } else {
+            cell.showPlayButton()
+        }
         return cell
     }
     
@@ -72,14 +72,4 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
         return 60
     }
     
-    func playTrack(urlString: String) {
-        if let url = URL(string: urlString) {
-            playerItem = AVPlayerItem(url: url)
-            player = AVPlayer(playerItem: playerItem)
-            player?.play()
-        } else {
-            print("Error: Invalid audio URL.")
-        }
-    }
-
 }
