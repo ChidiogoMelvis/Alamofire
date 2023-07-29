@@ -48,9 +48,9 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
         networking.fetchPodcasts()
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        <#code#>
-    }
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        <#code#>
+//    }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = nil

@@ -21,7 +21,19 @@ extension SearchPageViewController {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
-        cell.backgroundColor = .lightGray
+        let podcast = filteredPodcasts[indexPath.item]
+        cell.artistName.text = podcast.artistName
+        cell.collectionName.text = podcast.collectionName
+        if let artworkURL = URL(string: podcast.artworkUrl100) {
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: artworkURL),
+                       let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            cell.artworkImageView.image = image
+                        }
+                    }
+                }
+            }
         return cell
     }
     
