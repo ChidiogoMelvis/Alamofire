@@ -5,4 +5,4 @@ App Coordinator Pattern - Introducing coordinator patterns which takes the role 
 
 AVFoundation Framework - A framework which handles the media files which includes playing, processing, controlling in iOS, macOS etc, just as i mentioned earlier, the framework will be added for accessing of audio files.
 
-Realm Database - An object-oriented storage in Mobile Development, this database solution will be used for storing and saving the streamed media files.
+Realm Database - An object-oriented storage in Mobile Development, this database solution will be used for storing, saving and deleting of the streamed media files.
