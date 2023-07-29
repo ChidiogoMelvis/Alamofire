@@ -14,6 +14,7 @@ extension SearchPageViewController {
         view.addSubview(cameraButton)
         view.addSubview(searchBar)
         view.addSubview(searchCollectionView)
+        view.isUserInteractionEnabled = true
         
         NSLayoutConstraint.activate([
             searchLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
