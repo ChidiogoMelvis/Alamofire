@@ -45,16 +45,43 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        networking.fetchPodcasts()
+        fetchPodcasts()
     }
     
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        <#code#>
-//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            filterPodcasts(for: searchText)
+        }
+        
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.text = nil
+            searchBar.resignFirstResponder()
+            filterPodcasts(for: nil)
+        }
+        
+        func filterPodcasts(for searchText: String?) {
+            if let searchText = searchText, !searchText.isEmpty {
+                filteredPodcasts = podcasts.filter { podcast in
+                    return podcast.collectionName.range(of: searchText, options: .caseInsensitive) != nil
+                }
+            } else {
+                filteredPodcasts = podcasts
+            }
+            searchCollectionView.reloadData()
+        }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = nil
-        searchBar.resignFirstResponder()
-    }
+    func fetchPodcasts() {
+            networking.fetchPodcasts { [weak self] result in
+                switch result {
+                case .success(let welcome):
+                    self?.podcasts = welcome.results
+                    self?.filteredPodcasts = welcome.results // Initialize filteredPodcasts with fetched data
+                    DispatchQueue.main.async {
+                        self?.searchCollectionView.reloadData()
+                    }
+                case .failure(let error):
+                    print("Error fetching data: \(error)")
+                }
+            }
+        }
     
 }

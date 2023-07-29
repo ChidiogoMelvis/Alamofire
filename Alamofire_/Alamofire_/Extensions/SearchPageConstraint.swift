@@ -29,7 +29,7 @@ extension SearchPageViewController {
             searchCollectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 20),
             searchCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             searchCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
-            searchCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
+            searchCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
             
         ])
     }

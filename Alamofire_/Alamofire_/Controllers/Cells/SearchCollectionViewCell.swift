@@ -42,9 +42,11 @@ class SearchCollectionViewCell: UICollectionViewCell {
             
             artistName.topAnchor.constraint(equalTo: artworkImageView.bottomAnchor, constant: 5),
             artistName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            artistName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
             collectionName.topAnchor.constraint(equalTo: artistName.bottomAnchor, constant: 4),
-            collectionName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8)
+            collectionName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            collectionName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8)
         ])
         
     }

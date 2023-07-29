@@ -11,7 +11,7 @@ import UIKit
 extension SearchPageViewController {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
+        return 1
         
     }
     
@@ -34,28 +34,13 @@ extension SearchPageViewController {
                     }
                 }
             }
+//        cell.backgroundColor = .red
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 170, height: 100)
+        return CGSize(width: 170, height: 150)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0:
-            if indexPath.item < 1 {
-                let viewController = RecentlyPlayedViewController()
-                navigationController?.pushViewController(viewController, animated: true)
-                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            } else if indexPath.item == 1 {
-                let viewController = IndiePopViewController()
-                navigationController?.pushViewController(viewController, animated: true)
-                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            }
-        default:
-            break
-        }
-    }
     
 }
