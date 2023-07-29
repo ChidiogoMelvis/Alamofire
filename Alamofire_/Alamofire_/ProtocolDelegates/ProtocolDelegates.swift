@@ -20,4 +20,7 @@ protocol EditorsCollectionViewDelegate{
     func didSelectAlbum(_album: Datum)
 }
 
+protocol DisplayPodcastDelegate {
+    func didSelectPodcast(_podcast: Podcast)
+}
 

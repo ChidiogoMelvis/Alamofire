@@ -34,7 +34,6 @@ extension SearchPageViewController {
                     }
                 }
             }
-//        cell.backgroundColor = .red
         return cell
     }
     
@@ -42,5 +41,8 @@ extension SearchPageViewController {
         return CGSize(width: 170, height: 150)
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedPodcast = podcasts[indexPath.item]
+        
+    }
 }

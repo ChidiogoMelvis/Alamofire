@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     
     var podcasts = [Podcast] ()
     
@@ -17,7 +17,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let searchLabel = Label(label: "Search", textColor: .white)
     
-    let cameraButton = Button(image: UIImage(named: "camera"),  label: "", btnColor: .clear)
+    //let cameraButton = Button(image: UIImage(named: "camera"),  label: "", btnColor: .clear)
     
     lazy var searchBar: UISearchBar = {
         let search = UISearchBar()
@@ -83,5 +83,9 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
                 }
             }
         }
+    
+//    func didSelectPodcast(_podcast: Podcast) {
+//        <#code#>
+//    }
     
 }

@@ -11,7 +11,7 @@ import UIKit
 extension SearchPageViewController {
     func setupViews() {
         view.addSubview(searchLabel)
-        view.addSubview(cameraButton)
+        //view.addSubview(cameraButton)
         view.addSubview(searchBar)
         view.addSubview(searchCollectionView)
         view.isUserInteractionEnabled = true
@@ -20,8 +20,8 @@ extension SearchPageViewController {
             searchLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             searchLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             
-            cameraButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
-            cameraButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
+            //cameraButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            //cameraButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             
             searchBar.topAnchor.constraint(equalTo: searchLabel.bottomAnchor, constant: 20),
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
