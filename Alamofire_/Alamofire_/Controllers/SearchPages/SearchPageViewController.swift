@@ -58,16 +58,16 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
             filterPodcasts(for: nil)
         }
         
-        func filterPodcasts(for searchText: String?) {
-            if let searchText = searchText, !searchText.isEmpty {
-                filteredPodcasts = podcasts.filter { podcast in
-                    return podcast.collectionName.range(of: searchText, options: .caseInsensitive) != nil
-                }
-            } else {
-                filteredPodcasts = podcasts
+    func filterPodcasts(for searchText: String?) {
+        if let searchText = searchText, !searchText.isEmpty {
+            filteredPodcasts = podcasts.filter { podcast in
+                return podcast.collectionName.range(of: searchText, options: .caseInsensitive) != nil
             }
-            searchCollectionView.reloadData()
+        } else {
+            filteredPodcasts = []
         }
+        searchCollectionView.reloadData()
+    }
     
     func fetchPodcasts() {
             networking.fetchPodcasts { [weak self] result in
