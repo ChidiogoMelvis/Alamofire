@@ -30,11 +30,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
         
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
     func setupViews() {
         self.addSubview(artworkImageView)
         self.addSubview(artistName)
@@ -52,6 +47,10 @@ class SearchCollectionViewCell: UICollectionViewCell {
             collectionName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8)
         ])
         
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
