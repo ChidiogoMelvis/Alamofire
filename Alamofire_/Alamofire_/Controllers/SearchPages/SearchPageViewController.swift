@@ -74,7 +74,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
                 switch result {
                 case .success(let welcome):
                     self?.podcasts = welcome.results
-                    self?.filteredPodcasts = welcome.results // Initialize filteredPodcasts with fetched data
+                    self?.filteredPodcasts = welcome.results 
                     DispatchQueue.main.async {
                         self?.searchCollectionView.reloadData()
                     }
