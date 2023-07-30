@@ -13,9 +13,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     var delegate: DisplayPodcastDelegate?
     
-    let artistName = Label(label: "", textColor: .black)
+    let artistLabel = Label(label: "", textColor: .black)
     
-    let collectionName = Label(label: "", textColor: .black)
+    let titleLabel = Label(label: "", textColor: .black)
     
     let trackName = Label(label: "", textColor: .black)
     
@@ -25,7 +25,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    
+    var videoURL: URL?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -34,21 +35,21 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     func setupViews() {
         self.addSubview(artworkImageView)
-        self.addSubview(artistName)
-        self.addSubview(collectionName)
+        self.addSubview(artistLabel)
+        self.addSubview(titleLabel)
         
         NSLayoutConstraint.activate([
             artworkImageView.topAnchor.constraint(equalTo: self.topAnchor),
             artworkImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             artworkImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
-            artistName.topAnchor.constraint(equalTo: artworkImageView.bottomAnchor, constant: 5),
-            artistName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            artistName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+            artistLabel.topAnchor.constraint(equalTo: artworkImageView.bottomAnchor, constant: 5),
+            artistLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            artistLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             
-            collectionName.topAnchor.constraint(equalTo: artistName.bottomAnchor, constant: 4),
-            collectionName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            collectionName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8)
+            titleLabel.topAnchor.constraint(equalTo: artistLabel.bottomAnchor, constant: 4),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8)
         ])
         
     }

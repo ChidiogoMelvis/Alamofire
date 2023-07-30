@@ -9,18 +9,17 @@ import Foundation
 import Alamofire
 
 class Networking  {
-    
-    func fetchPodcasts(completion: @escaping (Result<Welcome, Error>) -> Void) {
-           let url = "https://itunes.apple.com/search?media=podcast&term=technology"
-           AF.request(url).responseDecodable(of: Welcome.self) { response in
-               switch response.result {
-               case .success(let welcome):
-                   completion(.success(welcome))
-               case .failure(let error):
-                   completion(.failure(error))
-               }
-           }
-       }
+    func fetchMusicVideos(completion: @escaping (Result<Welcome, Error>) -> Void) {
+        let url = "https://itunes.apple.com/search?media=musicVideo&term=Chris%20Brown"
+        AF.request(url).responseDecodable(of: Welcome.self) { response in
+            switch response.result {
+            case .success(let welcome):
+                completion(.success(welcome))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 
     func searchAlbum(query: String, completion: @escaping (Result<Playlist, Error>) -> Void) {
         let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
