@@ -22,6 +22,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
     lazy var artworkImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -42,6 +44,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
             artworkImageView.topAnchor.constraint(equalTo: self.topAnchor),
             artworkImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             artworkImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            artworkImageView.widthAnchor.constraint(equalToConstant: 150),
+            artworkImageView.heightAnchor.constraint(equalToConstant: 80),
             
             artistLabel.topAnchor.constraint(equalTo: artworkImageView.bottomAnchor, constant: 5),
             artistLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
