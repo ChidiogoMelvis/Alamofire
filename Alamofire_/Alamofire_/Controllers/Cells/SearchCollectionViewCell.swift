@@ -11,7 +11,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     let identifier = "SearchCollectionViewCell"
     
-    //var delegate: DisplayPodcastDelegate?
+    var delegate: DisplayPodcastDelegate?
     
     let artistName = Label(label: "", textColor: .black)
     

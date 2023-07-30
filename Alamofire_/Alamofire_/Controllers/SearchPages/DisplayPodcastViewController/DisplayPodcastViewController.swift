@@ -11,7 +11,7 @@ import AVKit
 
 class DisplayPodcastViewController: UIViewController {
     
-    var podcast: Podcast?
+    var podcast = [Podcast] ()
    
     override func viewDidLoad() {
         super.viewDidLoad()

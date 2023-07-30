@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
+class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, DisplayPodcastDelegate{
     
     var podcasts = [Podcast] ()
     
@@ -84,8 +84,10 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
             }
         }
     
-//    func didSelectPodcast(_podcast: Podcast) {
-//        <#code#>
-//    }
+    func didSelectPodcast(_podcast: Podcast) {
+        let vc = DisplayPodcastViewController()
+        vc.podcast = podcasts
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
