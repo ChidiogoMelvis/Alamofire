@@ -11,6 +11,8 @@ import AVKit
 
 class DisplayVideoViewController: UIViewController {
     
+    var selectedPodcast: Podcast?
+    
     var player: AVPlayer?
     var playerViewController: AVPlayerViewController?
    

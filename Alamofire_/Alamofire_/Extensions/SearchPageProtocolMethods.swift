@@ -34,7 +34,7 @@ extension SearchPageViewController {
                     }
                 }
             }
-        cell.delegate = self
+        //cell.delegate = self
         return cell
     }
     
@@ -43,8 +43,10 @@ extension SearchPageViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedPodcast = filteredPodcasts[indexPath.item]
-        didSelectPodcast(_podcast: selectedPodcast)
+        let selectedPodcast = podcasts[indexPath.item]
+        let vc = DisplayVideoViewController()
+            vc.selectedPodcast = selectedPodcast
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 }

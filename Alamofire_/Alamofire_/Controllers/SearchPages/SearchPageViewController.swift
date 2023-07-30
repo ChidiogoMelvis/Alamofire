@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, DisplayPodcastDelegate{
+class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     var podcasts = [Podcast] ()
     
@@ -84,10 +84,5 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
             }
         }
     
-    func didSelectPodcast(_podcast: Podcast) {
-        let vc = DisplayVideoViewController()
-        vc.podcast = podcasts
-        navigationController?.pushViewController(vc, animated: true)
-    }
     
 }
