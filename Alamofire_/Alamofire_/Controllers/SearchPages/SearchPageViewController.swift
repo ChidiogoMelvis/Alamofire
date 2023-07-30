@@ -85,7 +85,7 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
         }
     
     func didSelectPodcast(_podcast: Podcast) {
-        let vc = DisplayPodcastViewController()
+        let vc = DisplayVideoViewController()
         vc.podcast = podcasts
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -41,7 +41,7 @@
 		04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */; };
 		04A5DF622A5D7E960011F70C /* EditorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */; };
 		04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */; };
-		04CB207B2A75AF260059745E /* DisplayPodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB207A2A75AF260059745E /* DisplayPodcastViewController.swift */; };
+		04CB207B2A75AF260059745E /* DisplayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB207A2A75AF260059745E /* DisplayVideoViewController.swift */; };
 		04CB207E2A75C7510059745E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 04CB207D2A75C7510059745E /* Realm */; };
 		04CB20802A75C7510059745E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04CB207F2A75C7510059745E /* RealmSwift */; };
 		04DF093C2A62518E0023D035 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */; };
@@ -104,7 +104,7 @@
 		04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageConstraints.swift; sourceTree = "<group>"; };
 		04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongCollectionViewCell.swift; sourceTree = "<group>"; };
-		04CB207A2A75AF260059745E /* DisplayPodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPodcastViewController.swift; sourceTree = "<group>"; };
+		04CB207A2A75AF260059745E /* DisplayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVideoViewController.swift; sourceTree = "<group>"; };
 		04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		04DF093E2A6387260023D035 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		04DF09412A638ECD0023D035 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
@@ -340,7 +340,7 @@
 		04CB20792A75AEEB0059745E /* DisplayPodcastViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04CB207A2A75AF260059745E /* DisplayPodcastViewController.swift */,
+				04CB207A2A75AF260059745E /* DisplayVideoViewController.swift */,
 			);
 			path = DisplayPodcastViewController;
 			sourceTree = "<group>";
@@ -492,7 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CB207B2A75AF260059745E /* DisplayPodcastViewController.swift in Sources */,
+				04CB207B2A75AF260059745E /* DisplayVideoViewController.swift in Sources */,
 				04718B232A5E6B4600A636FB /* SearchPageConstraint.swift in Sources */,
 				04018C972A5CDE0F002FF85F /* AppCoordinator.swift in Sources */,
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,

@@ -9,16 +9,15 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class DisplayPodcastViewController: UIViewController {
+class DisplayVideoViewController: UIViewController {
     
-    var podcast = [Podcast] ()
+    var player: AVPlayer?
+    var playerViewController: AVPlayerViewController?
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    
     
 }
