@@ -28,6 +28,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
     }()
     
     var videoURL: URL?
+    
+    var parentViewController: UIViewController?
 
     override init(frame: CGRect) {
         super.init(frame: frame)

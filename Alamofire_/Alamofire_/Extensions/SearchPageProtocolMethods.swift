@@ -34,6 +34,8 @@ extension SearchPageViewController {
                     }
                 }
             }
+        cell.videoURL = URL(string: filteredPodcasts[indexPath.item].collectionViewURL ?? <#default value#>)
+        cell.parentViewController = self
         //cell.delegate = self
         return cell
     }
