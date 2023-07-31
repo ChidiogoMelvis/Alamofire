@@ -20,7 +20,6 @@ class DisplayVideoViewController: UIViewController {
         setupVideoPlayer()
     }
     
-    
     private func setupVideoPlayer() {
         guard let selectedPodcast = selectedPodcast,
               let videoURLString = selectedPodcast.collectionViewURL,
