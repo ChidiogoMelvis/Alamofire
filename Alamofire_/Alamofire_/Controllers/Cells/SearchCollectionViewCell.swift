@@ -30,7 +30,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
     var videoURL: URL?
     
     var parentViewController: UIViewController?
-
+    
+    let playButton = Button(image: UIImage(systemName: "play.circle"), label: "", btnColor: .gray)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

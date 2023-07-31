@@ -34,8 +34,8 @@ extension SearchPageViewController {
                     }
                 }
             }
-        cell.videoURL = URL(string: filteredPodcasts[indexPath.item].collectionViewURL ?? <#default value#>)
-            //cell.parentViewController = self
+        //cell.videoURL = URL(string: filteredPodcasts[indexPath.item].collectionViewURL ?? <#default value#>)
+            cell.parentViewController = self
         //cell.delegate = self
         return cell
     }
@@ -45,10 +45,6 @@ extension SearchPageViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedPodcast = podcasts[indexPath.item]
-        let vc = DisplayVideoViewController()
-            vc.selectedPodcast = selectedPodcast
-        navigationController?.pushViewController(vc, animated: true)
-        
+       
     }
 }
