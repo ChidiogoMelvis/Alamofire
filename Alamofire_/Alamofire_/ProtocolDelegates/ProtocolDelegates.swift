@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-protocol SearchTableViewCellDelegate {
-    func didSelectRow(_vc: UIViewController)
-}
+//protocol SearchTableViewCellDelegate {
+//    func didSelectRow(_vc: UIViewController)
+//}
 
 protocol AlbumTableViewButtonsDelegate{
     func presentView(cell: AlbumTableViewCell)
@@ -20,7 +20,7 @@ protocol EditorsCollectionViewDelegate{
     func didSelectAlbum(_album: Datum)
 }
 
-protocol DisplayPodcastDelegate {
-    func didSelectPodcast(_podcast: Podcast)
-}
+//protocol DisplayPodcastDelegate {
+//    func didSelectPodcast(_podcast: Podcast)
+//}
 
