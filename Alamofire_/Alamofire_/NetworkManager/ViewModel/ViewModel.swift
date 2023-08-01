@@ -13,7 +13,6 @@ class PlaylistViewModel {
     func searchAlbum(query: String, completion: @escaping (Result<Playlist, Error>) -> Void) {
             let url = //"https://api.deezer.com/1.0/search/album?q=\(query)"
    "https://api.jamendo.com/v3.0/tracks/?client_id=132a4b14"
-            
             AF.request(url).responseDecodable(of: Playlist.self) { response in
                 switch response.result {
                 case .success(let playlist):

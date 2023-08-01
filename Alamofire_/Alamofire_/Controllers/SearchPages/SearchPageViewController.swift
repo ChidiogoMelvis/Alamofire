@@ -81,6 +81,4 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
                 }
             }
         }
-    
-    
 }
