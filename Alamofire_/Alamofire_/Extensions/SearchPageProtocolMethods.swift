@@ -27,15 +27,15 @@ extension SearchPageViewController {
         //cell.artistLabel.text = podcast.trackViewURL
         cell.videoURL = URL(string: podcast.previewURL ?? "" )
         if let artworkURL = URL(string: podcast.artworkUrl100) {
-                DispatchQueue.global().async {
-                    if let data = try? Data(contentsOf: artworkURL),
-                       let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            cell.artworkImageView.image = image
-                        }
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: artworkURL),
+                   let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        cell.artworkImageView.image = image
                     }
                 }
             }
+        }
         cell.delegate = self
         return cell
     }
@@ -46,12 +46,12 @@ extension SearchPageViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let podcast = filteredPodcasts[indexPath.item]
-                navigateToVideoPlayer(with: podcast)
+        navigateToVideoPlayer(with: podcast)
     }
     
     func navigateToVideoPlayer(with podcast: Podcast) {
         let vc = PlayVideoViewController()
-            vc.podcast = podcast
+        vc.podcast = podcast
         navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -9,7 +9,7 @@ import UIKit
 import Realm
 
 class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
     lazy var libraryTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -18,7 +18,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.register(LibraryTableViewCell.self, forCellReuseIdentifier: "LibraryTableViewCell")
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -29,7 +29,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     func setTitleColor() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -54,5 +54,5 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
             libraryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
         ])
     }
-
+    
 }

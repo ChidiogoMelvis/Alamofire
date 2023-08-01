@@ -8,7 +8,7 @@
 import UIKit
 
 class Label: UILabel {
-
+    
     init(label: String, textColor: UIColor) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -18,9 +18,9 @@ class Label: UILabel {
         self.textAlignment = .center
         self.lineBreakMode = .byWordWrapping
         self.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-}
-
-required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-}
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

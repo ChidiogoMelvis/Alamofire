@@ -49,10 +49,10 @@ extension HomePageViewController {
             return cell
         case editorsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditorCollectionViewCell", for: indexPath) as! EditorsCollectionViewCell
-                        let album = albums[indexPath.item]
-                        cell.configure(with: album)
-                       cell.delegate = self
-                        return cell
+            let album = albums[indexPath.item]
+            cell.configure(with: album)
+            cell.delegate = self
+            return cell
         default:
             return UICollectionViewCell()
         }
