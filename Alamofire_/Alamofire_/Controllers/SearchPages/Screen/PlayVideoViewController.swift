@@ -54,7 +54,4 @@ class PlayVideoViewController: UIViewController {
             playButton.widthAnchor.constraint(equalToConstant: 40),
         ])
     }
-    
-    
-    
 }
