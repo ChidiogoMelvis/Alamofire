@@ -24,7 +24,6 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         setupViews()
         setTitleColor()
         title = "Library"
-        // Do any additional setup after loading the view.
     }
     
     func setTitleColor() {

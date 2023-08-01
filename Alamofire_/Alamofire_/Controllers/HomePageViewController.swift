@@ -10,7 +10,7 @@ import AVFoundation
 import Alamofire
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, EditorsCollectionViewDelegate {
-   
+    
     var playlistViewModel = PlaylistViewModel()
     
     var albums: [Datum] = []
@@ -102,22 +102,22 @@ class HomePageViewController: UIViewController, UICollectionViewDataSource, UICo
     func setTitleColor() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-
+    
     func fetchPlaylist() {
         playlistViewModel.searchAlbum(query: "Thriller") { [weak self] result in
-                    switch result {
-                    case .success(let playlist):
-                        self?.albums = playlist.results
-                        DispatchQueue.main.async {
-                            self?.recentlyPlayedCollectionView.reloadData()
-                            self?.reviewsCollectionView.reloadData()
-                            self?.topSongCollectionView.reloadData()
-                            self?.editorsCollectionView.reloadData()
-                        }
-                    case .failure(let error):
-                        print("Error fetching albums: \(error)")
-                    }
+            switch result {
+            case .success(let playlist):
+                self?.albums = playlist.results
+                DispatchQueue.main.async {
+                    self?.recentlyPlayedCollectionView.reloadData()
+                    self?.reviewsCollectionView.reloadData()
+                    self?.topSongCollectionView.reloadData()
+                    self?.editorsCollectionView.reloadData()
+                }
+            case .failure(let error):
+                print("Error fetching albums: \(error)")
             }
+        }
     }
     
 }
