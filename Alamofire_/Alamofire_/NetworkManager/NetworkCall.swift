@@ -10,7 +10,7 @@ import Alamofire
 
 class Networking  {
     func fetchMusicVideos(completion: @escaping (Result<Welcome, Error>) -> Void) {
-        let url = "https://itunes.apple.com/search?media=musicVideo&term=Chris%20Brown"
+        let url = "https://itunes.apple.com/search?media=musicVideo&term=akon"
         AF.request(url).responseDecodable(of: Welcome.self) { response in
             switch response.result {
             case .success(let welcome):

@@ -43,6 +43,7 @@
 		04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */; };
 		04CB207E2A75C7510059745E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 04CB207D2A75C7510059745E /* Realm */; };
 		04CB20802A75C7510059745E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04CB207F2A75C7510059745E /* RealmSwift */; };
+		04CB20832A775D440059745E /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB20822A775D440059745E /* PlayVideoViewController.swift */; };
 		04DF093C2A62518E0023D035 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */; };
 		04DF093F2A6387260023D035 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF093E2A6387260023D035 /* Protocol.swift */; };
 		04DF09422A638ECD0023D035 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF09412A638ECD0023D035 /* AlbumTableViewCell.swift */; };
@@ -103,6 +104,7 @@
 		04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageConstraints.swift; sourceTree = "<group>"; };
 		04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongCollectionViewCell.swift; sourceTree = "<group>"; };
+		04CB20822A775D440059745E /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		04DF093E2A6387260023D035 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		04DF09412A638ECD0023D035 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				042B99A02A5CD1E0005E2FBC /* SearchPageViewController.swift */,
+				04CB20812A775D200059745E /* Screen */,
 			);
 			path = SearchPages;
 			sourceTree = "<group>";
@@ -332,6 +335,14 @@
 				04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04CB20812A775D200059745E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				04CB20822A775D440059745E /* PlayVideoViewController.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		04DF09402A63872C0023D035 /* Protocol */ = {
@@ -485,6 +496,7 @@
 				04018C972A5CDE0F002FF85F /* AppCoordinator.swift in Sources */,
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,
 				040395972A71FB6A00D448FB /* TrackTableViewCell.swift in Sources */,
+				04CB20832A775D440059745E /* PlayVideoViewController.swift in Sources */,
 				04718B212A5E210B00A636FB /* ReviewsCollectionViewCell.swift in Sources */,
 				04A5DF622A5D7E960011F70C /* EditorsCollectionViewCell.swift in Sources */,
 				042B99A12A5CD1E0005E2FBC /* SearchPageViewController.swift in Sources */,

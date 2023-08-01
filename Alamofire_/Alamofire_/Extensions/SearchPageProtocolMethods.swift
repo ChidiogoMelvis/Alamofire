@@ -23,7 +23,9 @@ extension SearchPageViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
         let podcast = filteredPodcasts[indexPath.item]
         cell.artistLabel.text = podcast.artistName
-        cell.titleLabel.text = podcast.collectionName
+        cell.titleLabel.text = podcast.trackName
+        //cell.artistLabel.text = podcast.trackViewURL
+        cell.videoURL = URL(string: podcast.previewURL ?? "" )
         if let artworkURL = URL(string: podcast.artworkUrl100) {
                 DispatchQueue.global().async {
                     if let data = try? Data(contentsOf: artworkURL),
@@ -34,9 +36,7 @@ extension SearchPageViewController {
                     }
                 }
             }
-        //cell.videoURL = URL(string: filteredPodcasts[indexPath.item].collectionViewURL ?? <#default value#>)
-            cell.parentViewController = self
-        //cell.delegate = self
+        cell.delegate = self
         return cell
     }
     
@@ -45,6 +45,15 @@ extension SearchPageViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        let podcast = filteredPodcasts[indexPath.item]
+                navigateToVideoPlayer(with: podcast)
     }
+    
+    func navigateToVideoPlayer(with podcast: Podcast) {
+        let vc = PlayVideoViewController()
+            vc.podcast = podcast
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }

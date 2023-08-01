@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, PlayVideoDelegate {
     
     var podcasts = [Podcast] ()
     
@@ -16,8 +16,6 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     var networking = Networking()
     
     let searchLabel = Label(label: "Search", textColor: .white)
-    
-    //let cameraButton = Button(image: UIImage(named: "camera"),  label: "", btnColor: .clear)
     
     lazy var searchBar: UISearchBar = {
         let search = UISearchBar()
