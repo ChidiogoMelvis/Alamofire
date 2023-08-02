@@ -41,6 +41,8 @@
 		04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */; };
 		04A5DF622A5D7E960011F70C /* EditorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */; };
 		04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */; };
+		04B40FD82A7B0FF0004067E3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B40FD72A7B0FF0004067E3 /* Model.swift */; };
+		04B40FDA2A7B1421004067E3 /* SongsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B40FD92A7B1421004067E3 /* SongsDataSource.swift */; };
 		04CB207E2A75C7510059745E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 04CB207D2A75C7510059745E /* Realm */; };
 		04CB20802A75C7510059745E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04CB207F2A75C7510059745E /* RealmSwift */; };
 		04CB20832A775D440059745E /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB20822A775D440059745E /* PlayVideoViewController.swift */; };
@@ -104,6 +106,8 @@
 		04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageConstraints.swift; sourceTree = "<group>"; };
 		04A5DF612A5D7E960011F70C /* EditorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		04A5DF652A5D84580011F70C /* TopSongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongCollectionViewCell.swift; sourceTree = "<group>"; };
+		04B40FD72A7B0FF0004067E3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		04B40FD92A7B1421004067E3 /* SongsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsDataSource.swift; sourceTree = "<group>"; };
 		04CB20822A775D440059745E /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		04DF093B2A62518E0023D035 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		04DF093E2A6387260023D035 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		042B995A2A5A088B005E2FBC /* Alamofire_ */ = {
 			isa = PBXGroup;
 			children = (
+				04B40FD62A7B0FD0004067E3 /* RealmModel */,
 				045C90172A6170CC00ADD41A /* ProtocolDelegates */,
 				04A5DF562A5D0F5E0011F70C /* Extensions */,
 				04A5DF532A5CE2720011F70C /* ReusableViews */,
@@ -335,6 +340,15 @@
 				04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04B40FD62A7B0FD0004067E3 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				04B40FD72A7B0FF0004067E3 /* Model.swift */,
+				04B40FD92A7B1421004067E3 /* SongsDataSource.swift */,
+			);
+			path = RealmModel;
 			sourceTree = "<group>";
 		};
 		04CB20812A775D200059745E /* Screen */ = {
@@ -522,6 +536,8 @@
 				042B995E2A5A088B005E2FBC /* SceneDelegate.swift in Sources */,
 				04DF09422A638ECD0023D035 /* AlbumTableViewCell.swift in Sources */,
 				0463914B2A6CCA5100DB861F /* PodcastModel.swift in Sources */,
+				04B40FD82A7B0FF0004067E3 /* Model.swift in Sources */,
+				04B40FDA2A7B1421004067E3 /* SongsDataSource.swift in Sources */,
 				04A5DF552A5CF39F0011F70C /* Button.swift in Sources */,
 				04A5DF662A5D84580011F70C /* TopSongCollectionViewCell.swift in Sources */,
 			);
