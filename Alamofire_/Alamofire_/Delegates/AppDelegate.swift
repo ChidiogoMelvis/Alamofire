@@ -6,12 +6,20 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
      var window: UIWindow?
+    var realm: Realm!
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
+        do{
+             realm = try Realm()
+        } catch{
+            print("Failed to initialize\(error.localizedDescription)")
+        }
        
         let navigation = UINavigationController()
         
