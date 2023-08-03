@@ -10,8 +10,6 @@ import RealmSwift
 
 class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var songs: Results<Song>!
-    
     lazy var libraryTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,14 +23,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         setupViews()
         setTitleColor()
-        loadPlayedSongs()
         title = "Library"
-    }
-    
-    func loadPlayedSongs() {
-//        let realm = try! Realm()
-//        songs = realm.objects(Song.self)
-//        libraryTableView.reloadData()
     }
     
     func setTitleColor() {
@@ -40,7 +31,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
