@@ -9,6 +9,14 @@ import Foundation
 import RealmSwift
 
 class Song: Object{
-    @objc dynamic var title: String = ""
-    @objc dynamic var artist: String = ""
+    @Persisted var title: String
+    @Persisted var duration: Int
+    @Persisted var id: String
+    
+    convenience init(datum: Datum) {
+        self.init()
+        self.title = datum.name
+        self.duration = datum.duration
+        self.id = datum.id
+    }
 }
