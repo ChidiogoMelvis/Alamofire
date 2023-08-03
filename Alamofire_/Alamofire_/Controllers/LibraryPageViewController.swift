@@ -10,6 +10,8 @@ import RealmSwift
 
 class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var librarySongs: Results<Song>?
+    
     lazy var libraryTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
