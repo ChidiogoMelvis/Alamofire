@@ -180,7 +180,7 @@
 		042B995A2A5A088B005E2FBC /* Alamofire_ */ = {
 			isa = PBXGroup;
 			children = (
-				04B40FD62A7B0FD0004067E3 /* RealmModel */,
+				04B40FD62A7B0FD0004067E3 /* RealmManager */,
 				045C90172A6170CC00ADD41A /* ProtocolDelegates */,
 				04A5DF562A5D0F5E0011F70C /* Extensions */,
 				04A5DF532A5CE2720011F70C /* ReusableViews */,
@@ -340,12 +340,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		04B40FD62A7B0FD0004067E3 /* RealmModel */ = {
+		04B40FD62A7B0FD0004067E3 /* RealmManager */ = {
 			isa = PBXGroup;
 			children = (
 				04B40FD72A7B0FF0004067E3 /* Model.swift */,
+				04B40FDB2A7B6C03004067E3 /* DataSourceManager */,
 			);
-			path = RealmModel;
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		04B40FDB2A7B6C03004067E3 /* DataSourceManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSourceManager;
 			sourceTree = "<group>";
 		};
 		04CB20812A775D200059745E /* Screen */ = {
