@@ -7,11 +7,12 @@
 
 import UIKit
 import RealmSwift
-import NotificationCenter
 
 class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var librarySongs: Results<Song>?
+    
+    var notificationToken: NotificationToken?
     
     lazy var libraryTableView: UITableView = {
         let tableView = UITableView()
@@ -27,7 +28,6 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         setupViews()
         setTitleColor()
         title = "Library"
-        
         librarySongs = RealmManager.shared.getAllSongs()
 
     }
@@ -63,5 +63,9 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
             libraryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
         ])
     }
+    
+    deinit {
+          notificationToken?.invalidate()
+      }
     
 }

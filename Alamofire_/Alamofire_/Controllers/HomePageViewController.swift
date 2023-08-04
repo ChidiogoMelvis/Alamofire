@@ -8,7 +8,6 @@
 import UIKit
 import AVFoundation
 import Alamofire
-import NotificationCenter
 
 class HomePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, EditorsCollectionViewDelegate {
     

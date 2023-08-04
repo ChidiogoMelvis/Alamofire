@@ -37,6 +37,7 @@
 		04718B252A5E6C2300A636FB /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B242A5E6C2300A636FB /* Label.swift */; };
 		04718B292A5E735300A636FB /* SearchPageProtocolMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04718B282A5E735300A636FB /* SearchPageProtocolMethods.swift */; };
 		049E907E2A7C5C83006358FB /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E907D2A7C5C83006358FB /* RealmManager.swift */; };
+		049E90802A7DAF1C006358FB /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E907F2A7DAF1C006358FB /* NotificationCenter.swift */; };
 		04A5DF552A5CF39F0011F70C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF542A5CF39F0011F70C /* Button.swift */; };
 		04A5DF582A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF572A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift */; };
 		04A5DF5E2A5D10A40011F70C /* HomePageConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */; };
@@ -102,6 +103,7 @@
 		04718B242A5E6C2300A636FB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		04718B282A5E735300A636FB /* SearchPageProtocolMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageProtocolMethods.swift; sourceTree = "<group>"; };
 		049E907D2A7C5C83006358FB /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		049E907F2A7DAF1C006358FB /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		04A5DF542A5CF39F0011F70C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		04A5DF572A5D0FBB0011F70C /* HomePageCollectionViewProtocolMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCollectionViewProtocolMethods.swift; sourceTree = "<group>"; };
 		04A5DF5D2A5D10A40011F70C /* HomePageConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageConstraints.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				04B40FD72A7B0FF0004067E3 /* Model.swift */,
+				049E907F2A7DAF1C006358FB /* NotificationCenter.swift */,
 				049E907D2A7C5C83006358FB /* RealmManager.swift */,
 			);
 			path = RealmManager;
@@ -508,6 +511,7 @@
 			files = (
 				04718B232A5E6B4600A636FB /* SearchPageConstraint.swift in Sources */,
 				04018C972A5CDE0F002FF85F /* AppCoordinator.swift in Sources */,
+				049E90802A7DAF1C006358FB /* NotificationCenter.swift in Sources */,
 				042B998C2A5A097E005E2FBC /* HomePageViewController.swift in Sources */,
 				040395972A71FB6A00D448FB /* TrackTableViewCell.swift in Sources */,
 				04CB20832A775D440059745E /* PlayVideoViewController.swift in Sources */,
