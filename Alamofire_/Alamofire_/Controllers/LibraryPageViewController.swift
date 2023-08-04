@@ -26,6 +26,9 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         setupViews()
         setTitleColor()
         title = "Library"
+        
+        librarySongs = RealmManager.shared.getAllSongs()
+
     }
     
     func setTitleColor() {
@@ -33,11 +36,14 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return librarySongs?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryTableViewCell", for: indexPath) as! LibraryTableViewCell
+         let song = librarySongs?[indexPath.row]
+        cell.songLabel.text = song?.title
+            cell.backgroundColor = .darkGray
         cell.backgroundColor = .darkGray
         return cell
     }
