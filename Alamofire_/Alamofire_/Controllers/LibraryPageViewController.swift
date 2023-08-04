@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import NotificationCenter
 
 class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
