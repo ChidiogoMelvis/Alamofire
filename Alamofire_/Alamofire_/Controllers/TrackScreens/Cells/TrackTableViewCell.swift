@@ -25,13 +25,29 @@ class TrackTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
+        setupAudioPlayer()
         // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
+        setupAudioPlayer()
         playButton.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
+    }
+    
+    func setupAudioPlayer() {
+        NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying(_:)), name: .AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
+        
+    }
+    
+    @objc func songDidFinishPlaying(_ notification: Notification) {
+        guard let currentTime = player?.currentItem else {return}
+        let title = ""
+        
+        let playSong = Song()
+        playSong.title = title
+        RealmManager.shared.saveSong(playSong)
     }
     
     func setupViews() {

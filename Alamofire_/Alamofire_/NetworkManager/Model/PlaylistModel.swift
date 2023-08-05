@@ -45,7 +45,7 @@ class Headers: Codable {
 
 // MARK: - Result
 class Datum: Codable {
-    let id, name: String
+    var id, name: String
     let duration: Int
     let artistID: String?
     let artistName: ArtistName?

@@ -35,7 +35,7 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObjects()
-        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveAlbumSelection(_:)), name: .albumSelected, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveAlbumSelection(_:)), name: .albumSelected, object: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -51,12 +51,12 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
         ])
     }
     
-    @objc func didReceiveAlbumSelection(_ notification: Notification) {
-            if let selectedAlbum = notification.object as? Datum {
-                let song = Song(datum: selectedAlbum)
-                RealmManager.shared.saveSong(song)
-            }
-        }
+//    @objc func didReceiveAlbumSelection(_ notification: Notification) {
+//            if let selectedAlbum = notification.object as? Datum {
+//                let song = Song(datum: selectedAlbum)
+//                RealmManager.shared.saveSong(song)
+//            }
+//        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks.count

@@ -46,6 +46,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         cell.songLabel.text = song?.title
             cell.backgroundColor = .darkGray
         cell.backgroundColor = .darkGray
+        cell.songLabel.textColor = .white
         return cell
     }
     
