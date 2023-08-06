@@ -46,12 +46,29 @@ class TrackTableViewCell: UITableViewCell {
         var title = ""
         var duration = 0
         var id = ""
-        
+
         let playSong = Song()
         playSong.title = title
         playSong.duration = duration
         playSong.id = id
+
         RealmManager.shared.saveSong(playSong)
+        
+//        guard let playerItem = notification.object as? AVPlayerItem else { return }
+//
+//           let currentTimeInSeconds = CMTimeGetSeconds(playerItem.currentTime())
+//           let durationInSeconds = CMTimeGetSeconds(playerItem.duration)
+//
+//           guard let currentTrack = playerItem.asset as? AVURLAsset else { return }
+//           let id = currentTrack.url.absoluteString
+//
+//           let playSong = Song()
+//           playSong.title = "Song Title"
+//        playSong.duration = Int(durationInSeconds)
+//           playSong.id = id
+//        //playSong. = currentTimeInSeconds
+
+           RealmManager.shared.saveSong(playSong)
     }
     
     func setupViews() {
