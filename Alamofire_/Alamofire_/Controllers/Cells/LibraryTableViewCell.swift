@@ -16,15 +16,23 @@ class LibraryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.addSubview(songLabel)
-        songLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
-        songLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14).isActive = true
+        setupViews()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        setupViews()
         // Configure the view for the selected state
+    }
+    
+    func setupViews() {
+        self.addSubview(songLabel)
+        
+        NSLayoutConstraint.activate([
+            songLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            songLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14)
+        ])
     }
 
 }

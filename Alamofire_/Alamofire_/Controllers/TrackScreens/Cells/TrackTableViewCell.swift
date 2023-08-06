@@ -43,10 +43,14 @@ class TrackTableViewCell: UITableViewCell {
     
     @objc func songDidFinishPlaying(_ notification: Notification) {
         guard let currentTime = player?.currentItem else {return}
-        let title = ""
+        var title = ""
+        var duration = 0
+        var id = ""
         
         let playSong = Song()
         playSong.title = title
+        playSong.duration = duration
+        playSong.id = id
         RealmManager.shared.saveSong(playSong)
     }
     
