@@ -35,8 +35,6 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObjects()
-//        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveAlbumSelection(_:)), name: .albumSelected, object: nil)
-        // Do any additional setup after loading the view.
     }
     
     func setupObjects() {
@@ -51,13 +49,6 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
         ])
     }
     
-//    @objc func didReceiveAlbumSelection(_ notification: Notification) {
-//            if let selectedAlbum = notification.object as? Datum {
-//                let song = Song(datum: selectedAlbum)
-//                RealmManager.shared.saveSong(song)
-//            }
-//        }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks.count
     }
@@ -66,6 +57,7 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrackTableViewCell", for: indexPath) as! TrackTableViewCell
         let track = tracks[indexPath.row]
         cell.nameLabel.text = track.name
+        cell.durationLabel.text = formatDuration(track.duration)
         cell.track = track
         cell.playButton.tintColor = .gray
         if cell.audioIsPlaying {
@@ -77,7 +69,13 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 100
     }
+    
+    func formatDuration(_ duration: Int) -> String {
+            let minutes = duration / 60
+            let seconds = duration % 60
+            return String(format: "%02d:%02d", minutes, seconds)
+        }
     
 }

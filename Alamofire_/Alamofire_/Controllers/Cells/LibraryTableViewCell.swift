@@ -11,6 +11,8 @@ class LibraryTableViewCell: UITableViewCell {
     
     let songLabel = Label(label: "", textColor: .black)
     
+    let durationLabel = Label(label: "", textColor: .black)
+    
     let identifier = "LibraryTableViewCell"
 
     override func awakeFromNib() {
@@ -28,10 +30,14 @@ class LibraryTableViewCell: UITableViewCell {
     
     func setupViews() {
         self.addSubview(songLabel)
+        self.addSubview(durationLabel)
         
         NSLayoutConstraint.activate([
             songLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-            songLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14)
+            songLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
+            
+            durationLabel.topAnchor.constraint(equalTo: songLabel.bottomAnchor, constant: 8),
+            durationLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
         ])
     }
 

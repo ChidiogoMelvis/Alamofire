@@ -44,6 +44,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryTableViewCell", for: indexPath) as! LibraryTableViewCell
          let song = librarySongs?[indexPath.row]
         cell.songLabel.text = song?.title
+        cell.durationLabel.text = formatDuration(song?.duration ?? 0)
             cell.backgroundColor = .darkGray
         //cell.songLabel.textColor = .white
         return cell
@@ -63,6 +64,12 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
             libraryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
         ])
     }
+    
+    func formatDuration(_ duration: Int) -> String {
+            let minutes = duration / 60
+            let seconds = duration % 60
+            return String(format: "%02d:%02d", minutes, seconds)
+        }
     
     deinit {
           notificationToken?.invalidate()

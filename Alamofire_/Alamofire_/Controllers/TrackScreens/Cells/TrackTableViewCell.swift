@@ -20,6 +20,17 @@ class TrackTableViewCell: UITableViewCell {
     
     let nameLabel = Label(label: "", textColor: .black)
     
+    let durationLabel = Label(label: "", textColor: .black)
+    
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, durationLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 10
+        stackView.axis = .vertical
+        stackView.alignment = .leading
+        return stackView
+    }()
+    
     let playButton = Button(image: UIImage(systemName: "play.fill"), label: "", btnColor: .black)
     
     override func awakeFromNib() {
@@ -43,9 +54,9 @@ class TrackTableViewCell: UITableViewCell {
     
     @objc func songDidFinishPlaying(_ notification: Notification) {
         guard let currentTime = player?.currentItem else {return}
-        var title = ""
-        var duration = 0
-        var id = ""
+        let title = ""
+        let duration = 0
+        let id = ""
 
         let playSong = Song()
         playSong.title = title
@@ -53,35 +64,19 @@ class TrackTableViewCell: UITableViewCell {
         playSong.id = id
 
         RealmManager.shared.saveSong(playSong)
-        
-//        guard let playerItem = notification.object as? AVPlayerItem else { return }
-//
-//           let currentTimeInSeconds = CMTimeGetSeconds(playerItem.currentTime())
-//           let durationInSeconds = CMTimeGetSeconds(playerItem.duration)
-//
-//           guard let currentTrack = playerItem.asset as? AVURLAsset else { return }
-//           let id = currentTrack.url.absoluteString
-//
-//           let playSong = Song()
-//           playSong.title = "Song Title"
-//        playSong.duration = Int(durationInSeconds)
-//           playSong.id = id
-//        //playSong. = currentTimeInSeconds
 
-           RealmManager.shared.saveSong(playSong)
     }
     
     func setupViews() {
-        self.addSubview(nameLabel)
+        self.addSubview(stackView)
         self.addSubview(playButton)
         
         NSLayoutConstraint.activate([
-            
-            nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
-            
-            playButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
+            stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
+
+            playButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
             playButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
             playButton.widthAnchor.constraint(equalToConstant: 40),
             playButton.heightAnchor.constraint(equalToConstant: 40)
