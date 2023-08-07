@@ -28,9 +28,17 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        observeRealmChanges()
         librarySongs = RealmManager.shared.getAllSongs()
 
     }
+    
+    func observeRealmChanges() {
+           notificationToken = librarySongs?.observe { [weak self] changes in
+               guard let tableView = self?.libraryTableView else { return }
+               tableView.reloadData()
+           }
+       }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return librarySongs?.count ?? 0
@@ -49,6 +57,15 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let songToDelete = librarySongs?[indexPath.row] else { return }
+            RealmManager.shared.deleteSong(songToDelete)
+            tableView.reloadData()
+        }
+    }
+
     
     func setupViews() {
         view.addSubview(libraryTableView)
