@@ -33,7 +33,7 @@ class LibraryTableViewCell: UITableViewCell {
         self.addSubview(durationLabel)
         
         NSLayoutConstraint.activate([
-            songLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            songLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             songLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
             
             durationLabel.topAnchor.constraint(equalTo: songLabel.bottomAnchor, constant: 8),

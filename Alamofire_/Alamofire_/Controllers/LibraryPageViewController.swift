@@ -14,6 +14,8 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     var notificationToken: NotificationToken?
     
+    let playedSongs = Label(label: "Recently Played", textColor: .white)
+    
     lazy var libraryTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,14 +28,8 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        setTitleColor()
-        title = "Library"
         librarySongs = RealmManager.shared.getAllSongs()
 
-    }
-    
-    func setTitleColor() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,9 +52,13 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     func setupViews() {
         view.addSubview(libraryTableView)
+        view.addSubview(playedSongs)
         
         NSLayoutConstraint.activate([
-            libraryTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            playedSongs.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            playedSongs.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
+            
+            libraryTableView.topAnchor.constraint(equalTo: playedSongs.bottomAnchor, constant: 50),
             libraryTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             libraryTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             libraryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
