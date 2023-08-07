@@ -13,6 +13,8 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
     
     let nameLabel = Label(label: "", textColor: .black)
     
+    var durationLabel = Label(label: "", textColor: .black)
+    
     lazy var imageView: UIImageView = {
             let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,9 +37,10 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
     func setupViews() {
         self.addSubview(nameLabel)
         self.addSubview(imageView)
+        self.addSubview(durationLabel)
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
+            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 1),
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
             imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             imageView.heightAnchor.constraint(equalToConstant: 70),
@@ -46,8 +49,10 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
             nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
             nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-                ])
-            }
+        
+        durationLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+        durationLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+        ])}
     
     func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
            URLSession.shared.dataTask(with: url) { data, response, error in
@@ -67,6 +72,7 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
 
     func configure(with album: Datum) {
         nameLabel.text = album.name
+        durationLabel.text = formatDuration(album.duration)
         if let imageUrl = URL(string: album.image) {
                 downloadImage(from: imageUrl) { [weak self] image in
                     DispatchQueue.main.async {
@@ -74,5 +80,11 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
                     }
                 }
             }
+        }
+    
+    func formatDuration(_ duration: Int) -> String {
+            let minutes = duration / 60
+            let seconds = duration % 60
+            return String(format: "%02d:%02d", minutes, seconds)
         }
 }
