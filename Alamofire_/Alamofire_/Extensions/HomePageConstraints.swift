@@ -59,6 +59,4 @@ extension HomePageViewController {
             editorsCollectionView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
-    
-    
 }

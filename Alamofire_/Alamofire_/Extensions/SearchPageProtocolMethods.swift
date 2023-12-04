@@ -24,7 +24,6 @@ extension SearchPageViewController {
         let podcast = filteredPodcasts[indexPath.item]
         cell.artistLabel.text = podcast.artistName
         cell.titleLabel.text = podcast.trackName
-        //cell.artistLabel.text = podcast.trackViewURL
         cell.videoURL = URL(string: podcast.previewURL ?? "" )
         if let artworkURL = URL(string: podcast.artworkUrl100) {
             DispatchQueue.global().async {
@@ -54,6 +53,4 @@ extension SearchPageViewController {
         vc.podcast = podcast
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }

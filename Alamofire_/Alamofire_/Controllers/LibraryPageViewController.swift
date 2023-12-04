@@ -30,15 +30,15 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
         setupViews()
         observeRealmChanges()
         librarySongs = RealmManager.shared.getAllSongs()
-
+        
     }
     
     func observeRealmChanges() {
-           notificationToken = librarySongs?.observe { [weak self] changes in
-               guard let tableView = self?.libraryTableView else { return }
-               tableView.reloadData()
-           }
-       }
+        notificationToken = librarySongs?.observe { [weak self] changes in
+            guard let tableView = self?.libraryTableView else { return }
+            tableView.reloadData()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return librarySongs?.count ?? 0
@@ -46,10 +46,10 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryTableViewCell", for: indexPath) as! LibraryTableViewCell
-         let song = librarySongs?[indexPath.row]
+        let song = librarySongs?[indexPath.row]
         cell.songLabel.text = song?.title
         cell.durationLabel.text = formatDuration(song?.duration ?? 0)
-            cell.backgroundColor = .darkGray
+        cell.backgroundColor = .darkGray
         //cell.songLabel.textColor = .white
         return cell
     }
@@ -65,7 +65,7 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
             tableView.reloadData()
         }
     }
-
+    
     
     func setupViews() {
         view.addSubview(libraryTableView)
@@ -83,13 +83,12 @@ class LibraryPageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func formatDuration(_ duration: Int) -> String {
-            let minutes = duration / 60
-            let seconds = duration % 60
-            return String(format: "%02d:%02d", minutes, seconds)
-        }
+        let minutes = duration / 60
+        let seconds = duration % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
     
     deinit {
-          notificationToken?.invalidate()
-      }
-    
+        notificationToken?.invalidate()
+    }
 }

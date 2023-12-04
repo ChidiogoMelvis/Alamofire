@@ -46,12 +46,12 @@ class EditorsCollectionViewCell: UICollectionViewCell {
             imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             imageView.heightAnchor.constraint(equalToConstant: 70),
             imageView.widthAnchor.constraint(equalToConstant: 100),
-
+            
             nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
             nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
-
+            
             durationLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
             durationLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
@@ -87,13 +87,12 @@ class EditorsCollectionViewCell: UICollectionViewCell {
     }
     
     func formatDuration(_ duration: Int) -> String {
-            let minutes = duration / 60
-            let seconds = duration % 60
-            return String(format: "%02d:%02d", minutes, seconds)
-        }
+        let minutes = duration / 60
+        let seconds = duration % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

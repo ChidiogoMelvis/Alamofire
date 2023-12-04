@@ -23,8 +23,8 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
         search.placeholder = "Your favorites podcasts"
         search.delegate = self
         return search
-}()
-
+    }()
+    
     lazy var searchCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -47,15 +47,15 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            filterPodcasts(for: searchText)
-        }
-        
-        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-            searchBar.text = nil
-            searchBar.resignFirstResponder()
-            filterPodcasts(for: nil)
-        }
-        
+        filterPodcasts(for: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+        filterPodcasts(for: nil)
+    }
+    
     func filterPodcasts(for searchText: String?) {
         if let searchText = searchText, !searchText.isEmpty {
             filteredPodcasts = podcasts.filter { podcast in
@@ -68,17 +68,17 @@ class SearchPageViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func fetchPodcasts() {
-            networking.fetchMusicVideos { [weak self] result in
-                switch result {
-                case .success(let welcome):
-                    self?.podcasts = welcome.results
-                    self?.filteredPodcasts = welcome.results 
-                    DispatchQueue.main.async {
-                        self?.searchCollectionView.reloadData()
-                    }
-                case .failure(let error):
-                    print("Error fetching data: \(error)")
+        networking.fetchMusicVideos { [weak self] result in
+            switch result {
+            case .success(let welcome):
+                self?.podcasts = welcome.results
+                self?.filteredPodcasts = welcome.results 
+                DispatchQueue.main.async {
+                    self?.searchCollectionView.reloadData()
                 }
+            case .failure(let error):
+                print("Error fetching data: \(error)")
             }
         }
+    }
 }

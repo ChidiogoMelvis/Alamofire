@@ -14,17 +14,15 @@ class AlbumTableViewCell: UITableViewCell {
     var delegate: AlbumTableViewButtonsDelegate!
     
     var menuButtonCell = Button(image: UIImage(named: ""),  label: "", btnColor: .clear)
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
         menuButtonCell.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
-        // Configure the view for the selected state
     }
     
     @objc func btnTapped() {
@@ -39,5 +37,4 @@ class AlbumTableViewCell: UITableViewCell {
             menuButtonCell.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14)
         ])
     }
-
 }

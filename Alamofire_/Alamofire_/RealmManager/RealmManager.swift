@@ -44,6 +44,5 @@ class RealmManager {
     func getAllSongs() -> Results<Song> {
         return realm.objects(Song.self)
     }
-
 }
 

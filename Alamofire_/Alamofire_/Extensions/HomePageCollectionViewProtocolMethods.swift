@@ -90,12 +90,11 @@ extension HomePageViewController {
         let vc = EditorsTrackListViewController(tracks: albums)
         navigationController?.pushViewController(vc, animated: true)
         self.navigationController?.navigationBar.tintColor = .black
-
+        
     }
     
     func saveToLibrary(album: Datum) {
         let song = Song(datum: album)
         RealmManager.shared.saveSong(song)
     }
-    
 }

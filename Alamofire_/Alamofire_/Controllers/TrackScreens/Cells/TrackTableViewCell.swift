@@ -57,14 +57,14 @@ class TrackTableViewCell: UITableViewCell {
         let title = ""
         let duration = 0
         let id = ""
-
+        
         let playSong = Song()
         playSong.title = title
         playSong.duration = duration
         playSong.id = id
-
+        
         RealmManager.shared.saveSong(playSong)
-
+        
     }
     
     func setupViews() {
@@ -75,7 +75,7 @@ class TrackTableViewCell: UITableViewCell {
             stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
             stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
-
+            
             playButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
             playButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14),
             playButton.widthAnchor.constraint(equalToConstant: 40),
@@ -84,39 +84,38 @@ class TrackTableViewCell: UITableViewCell {
     }
     
     @objc func btnTapped() {
-           if let audioURLString = track.audio {
-               if audioIsPlaying {
-                   pauseAudio()
-                   showPlayButton()
-               } else {
-                   playAudio(audioURLString)
-                   showPauseButton()
-               }
-               audioIsPlaying.toggle()
-           } else {
-               print("error")
-           }
-       }
-
-       func playAudio(_ urlString: String) {
-           if let audioURL = URL(string: urlString) {
-               player = AVPlayer(url: audioURL)
-               player?.play()
-           }
-       }
+        if let audioURLString = track.audio {
+            if audioIsPlaying {
+                pauseAudio()
+                showPlayButton()
+            } else {
+                playAudio(audioURLString)
+                showPauseButton()
+            }
+            audioIsPlaying.toggle()
+        } else {
+            print("error")
+        }
+    }
+    
+    func playAudio(_ urlString: String) {
+        if let audioURL = URL(string: urlString) {
+            player = AVPlayer(url: audioURL)
+            player?.play()
+        }
+    }
     
     func pauseAudio() {
-            player?.pause()
-        }
-
-    func showPlayButton() {
-            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-        }
-
-        func showPauseButton() {
-            playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-        }
+        player?.pause()
+    }
     
+    func showPlayButton() {
+        playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    }
+    
+    func showPauseButton() {
+        playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+    }
 }
 
 

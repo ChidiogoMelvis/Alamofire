@@ -73,9 +73,8 @@ class EditorsTrackListViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func formatDuration(_ duration: Int) -> String {
-            let minutes = duration / 60
-            let seconds = duration % 60
-            return String(format: "%02d:%02d", minutes, seconds)
-        }
-    
+        let minutes = duration / 60
+        let seconds = duration % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
 }

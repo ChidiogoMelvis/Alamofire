@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-//protocol SearchTableViewCellDelegate {
-//    func didSelectRow(_vc: UIViewController)
-//}
-
 protocol AlbumTableViewButtonsDelegate{
     func presentView(cell: AlbumTableViewCell)
 }

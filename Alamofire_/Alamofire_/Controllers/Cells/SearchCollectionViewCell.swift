@@ -56,13 +56,10 @@ class SearchCollectionViewCell: UICollectionViewCell {
             titleLabel.topAnchor.constraint(equalTo: artistLabel.bottomAnchor, constant: 4),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-            
         ])
-        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

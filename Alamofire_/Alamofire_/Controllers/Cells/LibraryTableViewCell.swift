@@ -14,18 +14,15 @@ class LibraryTableViewCell: UITableViewCell {
     let durationLabel = Label(label: "", textColor: .black)
     
     let identifier = "LibraryTableViewCell"
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setupViews()
-        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupViews()
-        // Configure the view for the selected state
     }
     
     func setupViews() {
@@ -40,5 +37,4 @@ class LibraryTableViewCell: UITableViewCell {
             durationLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
         ])
     }
-
 }
